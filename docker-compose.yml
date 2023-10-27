@@ -12,13 +12,13 @@ services:
 
   vertisim_service:
     build:
-      context: ./vertisim_dev
+      context: ./vertisim
     ports:
       - "5001:5001"
     networks:
       - rl_network
     volumes:
-      - ./vertisim_dev:/app      
+      - ./vertisim:/app      
 
   service_orchestrator:
     build:
