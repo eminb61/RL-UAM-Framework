@@ -4,3 +4,6 @@
 [submodule "VertiSim"]
 	path = VertiSim
 	url = https://github.com/eminb61/VertiSim.git
+[submodule "RL-UAM"]
+	path = RL-UAM
+	url = https://github.com/eminb61/RL-UAM.git
