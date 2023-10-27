@@ -1,0 +1,37 @@
+version: '3.11'
+
+services:
+  rl_algorithm:
+    build:
+      context: ./RL-UAM
+    networks:
+      - rl_network
+    volumes:
+      - ./RL-UAM/src:/app/src      
+
+
+  vertisim_service:
+    build:
+      context: ./vertisim_dev
+    ports:
+      - "5001:5001"
+    networks:
+      - rl_network
+    volumes:
+      - ./vertisim_dev:/app      
+
+  service_orchestrator:
+    build:
+      context: ./service-orchestrator
+    ports:
+      - "6000:6000"
+    networks:
+      - rl_network
+    depends_on:
+      - vertisim_service
+    volumes:
+      - ./service-orchestrator:/app   
+
+networks:
+  rl_network:
+    driver: bridge
