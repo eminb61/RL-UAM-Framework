@@ -1,0 +1,3 @@
+[submodule "service-orchestrator"]
+	path = service-orchestrator
+	url = https://github.com/eminb61/service-orchestrator.git
