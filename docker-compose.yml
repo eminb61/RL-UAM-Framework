@@ -4,10 +4,12 @@ services:
   rl_algorithm:
     build:
       context: ./RL-UAM
+    ports:
+      - "6006:6006"       
     networks:
       - rl_network
     volumes:
-      - ./RL-UAM/src:/app/src      
+      - ./RL-UAM/src:/app/src           
 
 
   vertisim_service:
