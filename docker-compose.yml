@@ -5,7 +5,7 @@ services:
     build:
       context: ./RL-UAM
     ports:
-      - "6006:6006"       
+      - "6008:6006"       
     networks:
       - rl_network
     volumes:
@@ -16,7 +16,7 @@ services:
     build:
       context: ./vertisim
     ports:
-      - "5001:5001"
+      - "5003:5001"
     networks:
       - rl_network
     volumes:
@@ -26,7 +26,7 @@ services:
     build:
       context: ./service-orchestrator
     ports:
-      - "6000:6000"
+      - "6003:6000"
     networks:
       - rl_network
     depends_on:
