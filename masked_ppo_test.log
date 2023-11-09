@@ -6,170 +6,1217 @@ masked_ppo-rl_algorithm-1          | Using cpu device
 masked_ppo-rl_algorithm-1          | Wrapping the env in a DummyVecEnv.
 masked_ppo-rl_algorithm-1          | Using environment: <ActionMasker<Monitor<TimeLimit<OrderEnforcing<PassiveEnvChecker<VertiSimEnvWrapper<vertisim>>>>>>> with <class 'sb3_contrib.ppo_mask.ppo_mask.MaskablePPO'> policy
 masked_ppo-rl_algorithm-1          | RL called reset
-masked_ppo-rl_algorithm-1          | Logging to ./logs/tensorboard/PPO_24
+masked_ppo-rl_algorithm-1          | Logging to ./logs/tensorboard/PPO_26
 masked_ppo-rl_algorithm-1          | /usr/local/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.action_mask to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.action_mask` for environment variables or `env.get_wrapper_attr('action_mask')` that will search the reminding wrappers.[0m
 masked_ppo-rl_algorithm-1          |   logger.warn(
-masked_ppo-vertisim_service-1      | Reward: -1040
-masked_ppo-vertisim_service-1      | Reward: 0
-masked_ppo-vertisim_service-1      | Reward: 0
-masked_ppo-vertisim_service-1      | Reward: 357
+masked_ppo-vertisim_service-1      | Reward: -1120
+masked_ppo-vertisim_service-1      | Reward: 80
+masked_ppo-vertisim_service-1      | Reward: -1
+masked_ppo-vertisim_service-1      | Reward: -1
+masked_ppo-vertisim_service-1      | Reward: -1
+masked_ppo-vertisim_service-1      | Reward: 359
+masked_ppo-vertisim_service-1      | Reward: -1
+masked_ppo-vertisim_service-1      | Reward: -1
+masked_ppo-vertisim_service-1      | Reward: -4
 masked_ppo-vertisim_service-1      | Reward: -5
-masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [0] to MV at time : 00:14:15. Available aircraft at that location: [0]
-masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 00:16:19. Available aircraft at that location: [0, 1]
-masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [1, 3] to SFO at time : 00:17:19. Available aircraft at that location: [3]
-masked_ppo-vertisim_service-1      | Reward: -23
-masked_ppo-vertisim_service-1      | Reward: -23
-masked_ppo-vertisim_service-1      | Reward: -103
-masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [4] to SFO at time : 00:20:51. Available aircraft at that location: [2]
-masked_ppo-vertisim_service-1      | Reward: 3380
-masked_ppo-vertisim_service-1      | Reward: -100
-masked_ppo-vertisim_service-1      | Reward: -100
-masked_ppo-vertisim_service-1      | Reward: -102
-masked_ppo-vertisim_service-1      | Reward: 176
-masked_ppo-vertisim_service-1      | Reward: -104
-masked_ppo-vertisim_service-1      | Reward: -104
-masked_ppo-vertisim_service-1      | Reward: -106
-masked_ppo-vertisim_service-1      | Reward: -106
-masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [7] to SFO at time : 00:30:37. Available aircraft at that location: [0]
-masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [5, 6, 9] to MV at time : 00:31:15. Available aircraft at that location: [3]
-masked_ppo-vertisim_service-1      | Reward: 3374
-masked_ppo-vertisim_service-1      | Reward: -107
-masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [8] to SFO at time : 00:32:42. Available aircraft at that location: [1]
-masked_ppo-vertisim_service-1      | Reward: 4579
-masked_ppo-vertisim_service-1      | Reward: -21
-masked_ppo-vertisim_service-1      | Reward: -103
-masked_ppo-vertisim_service-1      | Reward: -103
-masked_ppo-vertisim_service-1      | Reward: -104
-masked_ppo-vertisim_service-1      | Reward: -104
-masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [11, 12] to MV at time : 00:36:51. Available aircraft at that location: [2]
-masked_ppo-vertisim_service-1      | Reward: 175
-masked_ppo-vertisim_service-1      | Reward: -106
-masked_ppo-vertisim_service-1      | Reward: -111
-masked_ppo-vertisim_service-1      | Reward: -111
-masked_ppo-vertisim_service-1      | Reward: -112
-masked_ppo-vertisim_service-1      | Reward: -112
-masked_ppo-vertisim_service-1      | Reward: -113
-masked_ppo-vertisim_service-1      | Reward: -113
-masked_ppo-vertisim_service-1      | Reward: -116
-masked_ppo-vertisim_service-1      | Reward: -117
-masked_ppo-vertisim_service-1      | Reward: -119
-masked_ppo-vertisim_service-1      | Reward: -125
-masked_ppo-vertisim_service-1      | Reward: -130
-masked_ppo-vertisim_service-1      | Reward: -130
-masked_ppo-vertisim_service-1      | Reward: -326
-masked_ppo-vertisim_service-1      | Reward: -326
-masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [10, 13, 17, 18] to SFO at time : 00:45:36. Available aircraft at that location: [3]
-masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [14, 15, 16] to MV at time : 00:45:37. Available aircraft at that location: [0]
-masked_ppo-vertisim_service-1      | Reward: -333
-masked_ppo-vertisim_service-1      | Reward: -336
-masked_ppo-vertisim_service-1      | Reward: -339
-masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [21] to MV at time : 00:47:43. Available aircraft at that location: [1]
-masked_ppo-vertisim_service-1      | Reward: -347
-masked_ppo-vertisim_service-1      | Reward: -348
-masked_ppo-vertisim_service-1      | Reward: -349
-masked_ppo-vertisim_service-1      | Reward: -353
-masked_ppo-vertisim_service-1      | Reward: 4333
-masked_ppo-vertisim_service-1      | Reward: -347
-masked_ppo-vertisim_service-1      | Reward: -348
-masked_ppo-vertisim_service-1      | Reward: 4352
-masked_ppo-vertisim_service-1      | Reward: -330
-masked_ppo-vertisim_service-1      | Reward: -434
-masked_ppo-vertisim_service-1      | Reward: -438
-masked_ppo-vertisim_service-1      | Reward: -441
-masked_ppo-vertisim_service-1      | Reward: 4239
-masked_ppo-vertisim_service-1      | Reward: -445
-masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [19, 20] to SFO at time : 00:52:24. Available aircraft at that location: [2]
-masked_ppo-vertisim_service-1      | Reward: -456
-masked_ppo-vertisim_service-1      | Reward: -466
-masked_ppo-vertisim_service-1      | Reward: -470
-masked_ppo-vertisim_service-1      | Reward: -479
-masked_ppo-vertisim_service-1      | Reward: -862
-masked_ppo-vertisim_service-1      | Reward: -880
-masked_ppo-vertisim_service-1      | Reward: 3813
-masked_ppo-vertisim_service-1      | Reward: -873
-masked_ppo-vertisim_service-1      | Reward: -890
-masked_ppo-vertisim_service-1      | Reward: -890
-masked_ppo-vertisim_service-1      | Reward: -1780
-masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [23, 25, 26, 27] to MV at time : 01:01:42. Available aircraft at that location: [3]
-masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [29, 31, 37, 38] to SFO at time : 01:01:46. Available aircraft at that location: [0]
-masked_ppo-vertisim_service-1      | Reward: -1823
-masked_ppo-vertisim_service-1      | Reward: -1849
-masked_ppo-vertisim_service-1      | Reward: -1861
-masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [39, 40, 42, 44] to SFO at time : 01:04:36. Available aircraft at that location: [0, 1]
-masked_ppo-vertisim_service-1      | Reward: -1885
-masked_ppo-vertisim_service-1      | Reward: -2698
-masked_ppo-vertisim_service-1      | Reward: -2705
-masked_ppo-vertisim_service-1      | Reward: -2705
-masked_ppo-vertisim_service-1      | Reward: -2713
-masked_ppo-vertisim_service-1      | Reward: -2717
-masked_ppo-vertisim_service-1      | Reward: -2717
-masked_ppo-vertisim_service-1      | Reward: -2723
-masked_ppo-vertisim_service-1      | Reward: -2762
-masked_ppo-vertisim_service-1      | Reward: -2762
-masked_ppo-vertisim_service-1      | Reward: -2762
-masked_ppo-vertisim_service-1      | Reward: -2788
-masked_ppo-vertisim_service-1      | Reward: -2788
-masked_ppo-vertisim_service-1      | Reward: -2790
-masked_ppo-vertisim_service-1      | Reward: -2804
-masked_ppo-vertisim_service-1      | Reward: -2821
-masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [32, 34, 36, 43] to MV at time : 01:09:21. Available aircraft at that location: [2]
-masked_ppo-vertisim_service-1      | Reward: -2837
-masked_ppo-vertisim_service-1      | Reward: -2839
-masked_ppo-vertisim_service-1      | Reward: -2839
-masked_ppo-vertisim_service-1      | Reward: -2848
-masked_ppo-vertisim_service-1      | Reward: -2857
-masked_ppo-vertisim_service-1      | Reward: -2859
-masked_ppo-vertisim_service-1      | Reward: -3618
-masked_ppo-vertisim_service-1      | Reward: -3623
-masked_ppo-vertisim_service-1      | Reward: -3636
-masked_ppo-vertisim_service-1      | Reward: -3643
-masked_ppo-vertisim_service-1      | Reward: -3647
-masked_ppo-vertisim_service-1      | Reward: -3650
-masked_ppo-vertisim_service-1      | Reward: 1084
-masked_ppo-vertisim_service-1      | Reward: 4644
-masked_ppo-vertisim_service-1      | Reward: -3518
-masked_ppo-vertisim_service-1      | Reward: -3520
-masked_ppo-vertisim_service-1      | Reward: -3522
-masked_ppo-vertisim_service-1      | Reward: -3525
-masked_ppo-vertisim_service-1      | Reward: -3615
-masked_ppo-vertisim_service-1      | Reward: -3616
-masked_ppo-vertisim_service-1      | All 92 passengers have arrived at time (sec) 4632.
-masked_ppo-vertisim_service-1      | Reward: -3623
-masked_ppo-vertisim_service-1      | Reward: -3626
-masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [56, 69, 79, 81] to MV at time : 01:24:29. Available aircraft at that location: [2, 0]
-masked_ppo-vertisim_service-1      | Reward: -3861
-masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [61, 67, 72, 75] to SFO at time : 01:25:33. Available aircraft at that location: [3]
-masked_ppo-vertisim_service-1      | Reward: 778
-masked_ppo-vertisim_service-1      | Reward: -3902
-masked_ppo-vertisim_service-1      | Reward: -3902
-masked_ppo-vertisim_service-1      | Reward: -3902
-masked_ppo-vertisim_service-1      | Reward: -3902
-masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [82, 86, 87] to MV at time : 01:27:06. Available aircraft at that location: [1]
-masked_ppo-vertisim_service-1      | Reward: -3903
-masked_ppo-vertisim_service-1      | Reward: -3903
-masked_ppo-vertisim_service-1      | Reward: -3903
-masked_ppo-vertisim_service-1      | Reward: -3903
-masked_ppo-vertisim_service-1      | Reward: -3903
-masked_ppo-vertisim_service-1      | Reward: -3903
-masked_ppo-vertisim_service-1      | Reward: -3904
-masked_ppo-vertisim_service-1      | Reward: -3904
-masked_ppo-vertisim_service-1      | Reward: -3904
-masked_ppo-vertisim_service-1      | Reward: -4000
-masked_ppo-vertisim_service-1      | Reward: -4000
-masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [83, 85, 88, 89] to SFO at time : 01:38:26. Available aircraft at that location: [3, 2]
-masked_ppo-vertisim_service-1      | Reward: -4000
-masked_ppo-vertisim_service-1      | Reward: -4000
-masked_ppo-vertisim_service-1      | Reward: -4000
-masked_ppo-vertisim_service-1      | Reward: -4000
-masked_ppo-vertisim_service-1      | Reward: -4000
-masked_ppo-vertisim_service-1      | Reward: -4000
-masked_ppo-vertisim_service-1      | Reward: -5120
-masked_ppo-vertisim_service-1      | Reward: -4000
-masked_ppo-vertisim_service-1      | Reward: -5120
+masked_ppo-vertisim_service-1      | Reward: -5
+masked_ppo-vertisim_service-1      | Reward: -8
+masked_ppo-vertisim_service-1      | Reward: -8
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 00:15:25. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [0] to SFO at time : 00:16:39. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [1, 2] to MV at time : 00:17:29. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: 4957
+masked_ppo-vertisim_service-1      | Reward: -4
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [3] to SFO at time : 00:18:43. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -5
+masked_ppo-vertisim_service-1      | Reward: 4679
+masked_ppo-vertisim_service-1      | Reward: -1
+masked_ppo-vertisim_service-1      | Reward: 80
+masked_ppo-vertisim_service-1      | Reward: -3
+masked_ppo-vertisim_service-1      | Reward: -3
+masked_ppo-vertisim_service-1      | Reward: -3
+masked_ppo-vertisim_service-1      | Reward: -5
+masked_ppo-vertisim_service-1      | Reward: -5
+masked_ppo-vertisim_service-1      | Reward: -5
+masked_ppo-vertisim_service-1      | Reward: -6
+masked_ppo-vertisim_service-1      | Reward: -8
+masked_ppo-vertisim_service-1      | Reward: -9
+masked_ppo-vertisim_service-1      | Reward: -11
+masked_ppo-vertisim_service-1      | Reward: -11
+masked_ppo-vertisim_service-1      | Reward: -15
+masked_ppo-vertisim_service-1      | Reward: -15
+masked_ppo-vertisim_service-1      | Reward: -17
+masked_ppo-vertisim_service-1      | Reward: -19
+masked_ppo-vertisim_service-1      | Reward: -20
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 15 at time: 00:30:00
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [5, 10] to SFO at time : 00:30:49. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -1023
+masked_ppo-vertisim_service-1      | Reward: 3662
+masked_ppo-vertisim_service-1      | Reward: -1019
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [4, 6, 7, 8] to MV at time : 00:32:03. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -1022
+masked_ppo-vertisim_service-1      | Reward: -1025
+masked_ppo-vertisim_service-1      | Reward: 3665
+masked_ppo-vertisim_service-1      | Reward: -1015
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [13] to SFO at time : 00:33:32. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -1018
+masked_ppo-vertisim_service-1      | Reward: -1020
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [9, 11, 12, 14] to MV at time : 00:35:16. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -1027
+masked_ppo-vertisim_service-1      | Reward: 8344
+masked_ppo-vertisim_service-1      | Reward: -1017
+masked_ppo-vertisim_service-1      | Reward: -1017
+masked_ppo-vertisim_service-1      | Reward: -1018
+masked_ppo-vertisim_service-1      | Reward: -1024
+masked_ppo-vertisim_service-1      | Reward: -1024
+masked_ppo-vertisim_service-1      | Reward: -1028
+masked_ppo-vertisim_service-1      | Reward: -1031
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 31 at time: 00:40:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 33 at time: 00:40:00
+masked_ppo-vertisim_service-1      | Reward: -3026
+masked_ppo-vertisim_service-1      | Reward: -3027
+masked_ppo-vertisim_service-1      | Reward: -3029
+masked_ppo-vertisim_service-1      | Reward: -3030
+masked_ppo-vertisim_service-1      | Reward: -3032
+masked_ppo-vertisim_service-1      | Reward: -3034
+masked_ppo-vertisim_service-1      | Reward: -3034
+masked_ppo-vertisim_service-1      | Reward: -3039
+masked_ppo-vertisim_service-1      | Reward: -3040
+masked_ppo-vertisim_service-1      | Reward: -3051
+masked_ppo-vertisim_service-1      | Reward: -3054
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [16, 23, 24, 26] to MV at time : 00:44:44. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 39 at time: 00:45:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 42 at time: 00:45:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 32 at time: 00:45:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 35 at time: 00:45:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 37 at time: 00:45:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 43 at time: 00:45:00
+masked_ppo-vertisim_service-1      | Reward: -9051
+masked_ppo-vertisim_service-1      | Reward: -9057
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [17, 18, 19, 20] to SFO at time : 00:46:28. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -9073
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [21, 22, 25, 30] to SFO at time : 00:49:11. Available aircraft at that location: [2, 3]
+masked_ppo-vertisim_service-1      | Reward: -9133
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [27, 28, 29, 38] to MV at time : 00:49:40. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -9146
+masked_ppo-vertisim_service-1      | Reward: -9146
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 40 at time: 00:50:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 47 at time: 00:50:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 53 at time: 00:50:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 55 at time: 00:50:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 34 at time: 00:50:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 41 at time: 00:50:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 45 at time: 00:50:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 49 at time: 00:50:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 51 at time: 00:50:00
+masked_ppo-vertisim_service-1      | Reward: -18077
+masked_ppo-vertisim_service-1      | Reward: -13359
+masked_ppo-vertisim_service-1      | Reward: -18042
+masked_ppo-vertisim_service-1      | Reward: -18046
+masked_ppo-vertisim_service-1      | Reward: -13360
+masked_ppo-vertisim_service-1      | Reward: -13338
+masked_ppo-vertisim_service-1      | Reward: -18018
+masked_ppo-vertisim_service-1      | Reward: -18022
+masked_ppo-vertisim_service-1      | Reward: -18032
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 57 at time: 00:55:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 62 at time: 00:55:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 64 at time: 00:55:00
+masked_ppo-vertisim_service-1      | Reward: -21045
+masked_ppo-vertisim_service-1      | Reward: -21046
+masked_ppo-vertisim_service-1      | Reward: -21050
+masked_ppo-vertisim_service-1      | Reward: -21055
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 59 at time: 01:00:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 67 at time: 01:00:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 65 at time: 01:00:00
+masked_ppo-vertisim_service-1      | Reward: -24034
+masked_ppo-vertisim_service-1      | Reward: -24038
+masked_ppo-vertisim_service-1      | Reward: -19337
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [36, 44, 48, 50] to SFO at time : 01:03:30. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -24025
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 74 at time: 01:05:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 68 at time: 01:05:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 72 at time: 01:05:00
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [46, 52, 54, 56] to MV at time : 01:05:00. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [58, 60, 61, 63] to SFO at time : 01:05:35. Available aircraft at that location: [1, 0]
+masked_ppo-vertisim_service-1      | Reward: -27019
+masked_ppo-vertisim_service-1      | Reward: -27023
+masked_ppo-vertisim_service-1      | Reward: -27025
+masked_ppo-vertisim_service-1      | Reward: -27030
+masked_ppo-vertisim_service-1      | Reward: -27033
+masked_ppo-vertisim_service-1      | Reward: -27036
+masked_ppo-vertisim_service-1      | Reward: -27039
+masked_ppo-vertisim_service-1      | Reward: -27044
+masked_ppo-vertisim_service-1      | Reward: -27044
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 75 at time: 01:10:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 77 at time: 01:10:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 70 at time: 01:10:00
+masked_ppo-vertisim_service-1      | Reward: -30017
+masked_ppo-vertisim_service-1      | Reward: -30018
+masked_ppo-vertisim_service-1      | Reward: -30020
+masked_ppo-vertisim_service-1      | Reward: -30022
+masked_ppo-vertisim_service-1      | Reward: -30022
+masked_ppo-vertisim_service-1      | Reward: -30023
+masked_ppo-vertisim_service-1      | Reward: -30023
+masked_ppo-vertisim_service-1      | Reward: -30025
+masked_ppo-vertisim_service-1      | Reward: -30025
+masked_ppo-vertisim_service-1      | Reward: -30025
+masked_ppo-vertisim_service-1      | Reward: -30028
+masked_ppo-vertisim_service-1      | Reward: -25332
+masked_ppo-vertisim_service-1      | Reward: -30012
+masked_ppo-vertisim_service-1      | Reward: -30013
+masked_ppo-vertisim_service-1      | Reward: -30014
+masked_ppo-vertisim_service-1      | All 92 passengers have arrived at time (sec) 4380.
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [66, 69, 71, 73] to MV at time : 01:14:22. Available aircraft at that location: [3, 2]
+masked_ppo-vertisim_service-1      | Reward: -25328
+masked_ppo-vertisim_service-1      | Reward: -30010
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 85 at time: 01:20:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 87 at time: 01:20:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 89 at time: 01:20:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 86 at time: 01:25:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 88 at time: 01:25:00
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 91 at time: 01:25:00
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [76, 78, 79, 83] to MV at time : 01:25:47. Available aircraft at that location: [2, 1]
+masked_ppo-vertisim_service-1      | Reward: -36008
+masked_ppo-vertisim_service-1      | Reward: -37128
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [80, 81, 82, 84] to SFO at time : 01:28:24. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -36016
+masked_ppo-vertisim_service-1      | Reward: -36017
+masked_ppo-vertisim_service-1      | Reward: -36019
+masked_ppo-vertisim_service-1      | Reward: -36019
+masked_ppo-vertisim_service-1      | Passenger spill: passenger 90 at time: 01:30:00
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 01:39:28. Available aircraft at that location: [2, 0]
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 01:48:07. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 01:48:47. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 02:01:42. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 02:07:22. Available aircraft at that location: [3, 1]
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 02:07:23. Available aircraft at that location: [2, 0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 02:21:13. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 02:26:22. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 02:26:46. Available aircraft at that location: [3, 1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 02:28:27. Available aircraft at that location: [2, 0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 02:46:01. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 02:46:03. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 02:48:08. Available aircraft at that location: [3, 1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 03:01:02. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 03:05:46. Available aircraft at that location: [2, 3]
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 03:06:09. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 03:20:00. Available aircraft at that location: [3, 1]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 03:22:53. Available aircraft at that location: [0, 2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 03:40:49. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 03:40:50. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 03:43:46. Available aircraft at that location: [3, 1]
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 03:54:58. Available aircraft at that location: [0, 2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 04:11:53. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 04:13:13. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 04:15:18. Available aircraft at that location: [3, 1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 04:26:16. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 04:34:22. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 04:35:01. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 04:39:30. Available aircraft at that location: [2, 1, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 04:56:01. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 04:57:02. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 04:58:06. Available aircraft at that location: [1, 2]
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 05:00:11. Available aircraft at that location: [1, 2, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 05:18:50. Available aircraft at that location: [1, 0]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 05:18:50. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 05:20:55. Available aircraft at that location: [2, 3]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 05:32:15. Available aircraft at that location: [2, 3, 1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 05:53:30. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -40360
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 05:53:54. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 05:55:35. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 06:08:31. Available aircraft at that location: [3, 2, 1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 06:25:37. Available aircraft at that location: [3, 0]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 06:25:45. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 06:27:50. Available aircraft at that location: [2, 1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 06:39:02. Available aircraft at that location: [2, 1, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 06:56:29. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 06:57:29. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 06:58:34. Available aircraft at that location: [1, 2]
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 07:10:24. Available aircraft at that location: [1, 2, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 07:30:48. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 07:33:27. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 07:44:39. Available aircraft at that location: [3, 1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 07:46:45. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 08:02:08. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 08:04:13. Available aircraft at that location: [3, 1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 08:04:49. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 08:06:18. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
 masked_ppo-rl_algorithm-1          | -----------------------------
 masked_ppo-rl_algorithm-1          | | time/              |      |
-masked_ppo-rl_algorithm-1          | |    fps             | 70   |
+masked_ppo-rl_algorithm-1          | |    fps             | 102  |
 masked_ppo-rl_algorithm-1          | |    iterations      | 1    |
-masked_ppo-rl_algorithm-1          | |    time_elapsed    | 14   |
+masked_ppo-rl_algorithm-1          | |    time_elapsed    | 10   |
 masked_ppo-rl_algorithm-1          | |    total_timesteps | 1024 |
 masked_ppo-rl_algorithm-1          | -----------------------------
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 08:25:00. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 08:25:05. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 08:27:32. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 08:29:37. Available aircraft at that location: [2, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 08:44:00. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 08:45:28. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 08:46:05. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 08:48:36. Available aircraft at that location: [2, 1, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 09:05:07. Available aircraft at that location: [0, 1]
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 09:07:19. Available aircraft at that location: [1, 3]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 09:18:23. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 09:21:31. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 09:35:08. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 09:37:13. Available aircraft at that location: [3, 1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 09:39:09. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 09:51:56. Available aircraft at that location: [1, 3, 2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 10:06:11. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 10:06:53. Available aircraft at that location: [2, 0]
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 10:08:16. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 10:24:28. Available aircraft at that location: [1, 3, 0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 10:26:33. Available aircraft at that location: [0, 3, 2]
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 10:39:20. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 10:41:24. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 10:58:56. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 10:59:06. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 11:01:00. Available aircraft at that location: [0, 2]
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 11:01:11. Available aircraft at that location: [1, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 11:19:41. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 11:20:35. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 11:21:46. Available aircraft at that location: [1, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 11:22:40. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 11:40:46. Available aircraft at that location: [1, 0]
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 11:40:54. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 11:56:41. Available aircraft at that location: [0, 2]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 11:58:07. Available aircraft at that location: [3, 1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 12:13:40. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 12:13:57. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -39240
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 12:15:45. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 12:16:02. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 12:32:39. Available aircraft at that location: [2, 1]
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 12:32:53. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 12:35:17. Available aircraft at that location: [1, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 12:46:05. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 12:52:25. Available aircraft at that location: [2, 1]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 12:52:33. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 13:00:36. Available aircraft at that location: [2, 1, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 13:17:08. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 13:19:56. Available aircraft at that location: [2, 1]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 13:21:39. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 13:32:47. Available aircraft at that location: [2, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 13:37:35. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 13:46:25. Available aircraft at that location: [1, 2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 13:47:44. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 13:50:47. Available aircraft at that location: [2, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 14:07:06. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 14:08:23. Available aircraft at that location: [3, 0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 14:09:10. Available aircraft at that location: [2, 1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 14:23:25. Available aircraft at that location: [2, 1, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 14:39:43. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 14:40:49. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 14:41:48. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 14:54:49. Available aircraft at that location: [2, 3]
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 14:59:27. Available aircraft at that location: [1]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 15:08:10. Available aircraft at that location: [2, 3, 0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 15:21:56. Available aircraft at that location: [2]
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to MV at time : 15:25:45. Available aircraft at that location: [2, 3]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to SFO at time : 15:26:10. Available aircraft at that location: [0, 1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to MV at time : 15:40:11. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 3 parked with passengers: [] to SFO at time : 15:45:04. Available aircraft at that location: [3]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to SFO at time : 15:47:08. Available aircraft at that location: [3, 2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 1 parked with passengers: [] to MV at time : 15:53:57. Available aircraft at that location: [0, 1]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 2 parked with passengers: [] to MV at time : 16:10:03. Available aircraft at that location: [1, 2]
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Aircraft 0 parked with passengers: [] to SFO at time : 16:10:49. Available aircraft at that location: [0]
+masked_ppo-vertisim_service-1      | Reward: -38120
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-vertisim_service-1      | Reward: -37000
+masked_ppo-rl_algorithm-1          | ------------------------------------------
+masked_ppo-rl_algorithm-1          | | time/                   |              |
+masked_ppo-rl_algorithm-1          | |    fps                  | 18           |
+masked_ppo-rl_algorithm-1          | |    iterations           | 2            |
+masked_ppo-rl_algorithm-1          | |    time_elapsed         | 108          |
+masked_ppo-rl_algorithm-1          | |    total_timesteps      | 2048         |
+masked_ppo-rl_algorithm-1          | | train/                  |              |
+masked_ppo-rl_algorithm-1          | |    approx_kl            | 9.722891e-06 |
+masked_ppo-rl_algorithm-1          | |    clip_fraction        | 0            |
+masked_ppo-rl_algorithm-1          | |    clip_range           | 0.2          |
+masked_ppo-rl_algorithm-1          | |    entropy_loss         | -1.27        |
+masked_ppo-rl_algorithm-1          | |    explained_variance   | -1.26e-05    |
+masked_ppo-rl_algorithm-1          | |    learning_rate        | 0.00099      |
+masked_ppo-rl_algorithm-1          | |    loss                 | 3.11e+10     |
+masked_ppo-rl_algorithm-1          | |    n_updates            | 10           |
+masked_ppo-rl_algorithm-1          | |    policy_gradient_loss | -9.48e-05    |
+masked_ppo-rl_algorithm-1          | |    value_loss           | 6.75e+10     |
+masked_ppo-rl_algorithm-1          | ------------------------------------------
+Gracefully stopping... (press Ctrl+C again to force)
+Aborting on container exit...
+ Container masked_ppo-service_orchestrator-1  Stopping
+ Container masked_ppo-rl_algorithm-1  Stopping
+ Container masked_ppo-service_orchestrator-1  Stopped
+ Container masked_ppo-vertisim_service-1  Stopping
+ Container masked_ppo-vertisim_service-1  Stopped
+ Container masked_ppo-rl_algorithm-1  Stopped
+canceled
