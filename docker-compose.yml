@@ -20,7 +20,7 @@ services:
     networks:
       - rl_network
     volumes:
-      - ./vertisim:/app      
+      - ./:/app
 
   service_orchestrator:
     build:
