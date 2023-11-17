@@ -1,6 +1,6 @@
 {
     "sim_params": {
-        "max_sim_time": 216000,
+        "max_sim_time": 21600000,
         "arrival_priority": 1,
         "departure_priority": 1,
         "simultaneous_taxi_and_take_off": true,
@@ -22,7 +22,7 @@
         "only_aircraft_simulation": false,
         "network_simulation": true,
         "verbose": true,
-        "training_data_collection": true
+        "training_data_collection": false
     },
 
     "sim_mode": {
@@ -219,6 +219,8 @@
         "output_folder_path": "../output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
+        "state_trajectory_db_name": "state_trajectory_db",
+        "state_trajectory_db_tablename": "training_data_collection", 
         "performance_metrics": [
             "passenger_waiting_time",
             "aircraft_holding_time",
