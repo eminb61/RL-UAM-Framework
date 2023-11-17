@@ -61,7 +61,7 @@
             "spill_cost": -1000,
             "truncation_penalty": -100000,
             "completion_reward": 0,
-            "charge_reward": 1            
+            "charge_reward": 0            
         }
     },
     "network_and_demand_params": {
