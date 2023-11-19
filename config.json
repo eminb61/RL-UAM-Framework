@@ -42,6 +42,7 @@
         "num_environmental_state_variables": 0,
         "num_additional_state_variables": 1,
         "num_actions": 3,
+        "soc_increment": 10,
         "stopping_events": [
             "passenger_arrival_event",
             "aircraft_parking_pad_arrival_event",
@@ -55,13 +56,13 @@
         ],
         "truncation": true,
         "reward_function_parameters": {
-            "waiting_time_penalty": -1,
+            "waiting_time_penalty": -0.5,
             "trip_reward": 15,
             "flight_cost": -1,
             "spill_cost": -1000,
             "truncation_penalty": -100000,
             "completion_reward": 0,
-            "charge_reward": 0            
+            "charge_reward": 1            
         }
     },
     "network_and_demand_params": {
@@ -93,7 +94,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_in_vertiport": 5,
+                    "num_initial_aircraft_in_vertiport": 2,
                     "initial_arrival_queue_state": 0
                 }
             },
@@ -117,7 +118,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_in_vertiport": 5,
+                    "num_initial_aircraft_in_vertiport": 2,
                     "initial_arrival_queue_state": 0
                 }
             }
@@ -130,9 +131,9 @@
         "airlink_segment_length": 1,
         "holding_unit_capacity": 20, 
         "cruise_altitude": 450,  
-        "static_wind": false, 
-        "wind_magnitude": 15, 
-        "wind_angle": 3.14159, 
+        "static_wind": "relative_to_north", 
+        "wind_magnitude_mph": 30,
+        "wind_angle_degrees": 3.14159, 
         "wind_data_file_path": "vertisim/vertisim/input/airspace/SFBayArea_wind_data.csv"
     },
     "passenger_params": {

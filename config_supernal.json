@@ -1,6 +1,6 @@
 {
     "sim_params": {
-        "max_sim_time": 21600000,
+        "max_sim_time": 216000,
         "arrival_priority": 1,
         "departure_priority": 1,
         "simultaneous_taxi_and_take_off": true,
@@ -22,7 +22,7 @@
         "only_aircraft_simulation": false,
         "network_simulation": true,
         "verbose": true,
-        "training_data_collection": true
+        "training_data_collection": false
     },
 
     "sim_mode": {
@@ -61,21 +61,22 @@
             "flight_cost": -10,
             "spill_cost": -1000,
             "truncation_penalty": -100000,
-            "completion_reward": 0
+            "completion_reward": 0,
+            "charge_reward": 1
         }
     },
 
     "network_and_demand_params": {
-        "vertiport_network_file_path": "vertisim/vertisim/input/network/network_SFO_MV.csv",
-        "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
+        "vertiport_network_file_path": "vertisim/vertisim/input/supernal_input/network_HHR_Warner.csv",
+        "vertiport_layout_file_path": "vertisim/vertisim/input/supernal_input/vertiport_layout.xls",
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
         "passenger_schedule_file_path": null,
-        "passenger_arrival_rates_path": "vertisim/vertisim/input/passenger/passenger_arrival_rates_sfo_mv_training.csv",
+        "passenger_arrival_rates_path": "vertisim/vertisim/input/supernal_input/passenger_arrival_rates_HHR_Warner.csv",
         "demand_probabilities": null,
         "vertiports": {
-            "SFO": {
-                "layout": "clover_1_fato_10_park_sfo",
+            "HHR": {
+                "layout": "clover_1_fato_4_park_hhr",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 8,
@@ -94,12 +95,12 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_in_vertiport": 7,
+                    "num_initial_aircraft_in_vertiport": 3,
                     "initial_arrival_queue_state": 0
                 }
             },
-            "MV": {
-                "layout": "clover_1_fato_10_park_mv",
+            "WARNER": {
+                "layout": "clover_1_fato_4_park_warner",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 8,
@@ -118,23 +119,23 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_in_vertiport": 7,
+                    "num_initial_aircraft_in_vertiport": 3,
                     "initial_arrival_queue_state": 0
                 }
             }
         }
     },
     "airspace_params": {
-        "airspace_layout_file_path": null,
+        "airspace_layout_file_path": "vertisim/vertisim/input/supernal_input/SupernalHRRWarnerRoute.csv",
         "airspace_layout_sheet_name": null,
         "airlink_capacity": 1,
         "airlink_segment_length": 1,
         "holding_unit_capacity": 20, 
         "cruise_altitude": 450,  
-        "static_wind": false, 
-        "wind_magnitude": 15, 
-        "wind_angle": 3.14159, 
-        "wind_data_file_path": "vertisim/vertisim/input/airspace/SFBayArea_wind_data.csv"
+        "static_wind": "relative_to_aircraft", 
+        "wind_magnitude_mph": 80,
+        "wind_angle_degrees": 180, 
+        "wind_data_file_path": "vertisim/vertisim/input/supernal_input/HHR_WARNER_WIND.csv"
     },
     "passenger_params": {
         "randomize_constants": false,
