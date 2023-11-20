@@ -18,7 +18,7 @@
             "status"
         ],
         "fleet_rebalancing": true,
-        "save_trajectories": false,
+        "save_trajectories": true,
         "only_aircraft_simulation": false,
         "network_simulation": true,
         "verbose": true,
@@ -133,8 +133,8 @@
         "holding_unit_capacity": 20, 
         "cruise_altitude": 450,  
         "static_wind": "relative_to_north", 
-        "wind_magnitude_mph": 30,
-        "wind_angle_degrees": 3.14159, 
+        "wind_magnitude_mph": 0,
+        "wind_angle_degrees": 0, 
         "wind_data_file_path": "vertisim/vertisim/input/airspace/SJC_SFO_wind_data.csv"
     },
     "passenger_params": {
