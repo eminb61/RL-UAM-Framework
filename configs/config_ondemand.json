@@ -42,7 +42,7 @@
         "num_environmental_state_variables": 0,
         "num_additional_state_variables": 1,
         "num_actions": 3,
-        "soc_increment": 20,
+        "soc_increment_per_charge_event": 20,
         "stopping_events": [
             "passenger_arrival_event",
             "aircraft_parking_pad_arrival_event",

@@ -14,7 +14,8 @@ services:
 
   vertisim_service:
     build:
-      context: ./vertisim
+      context: .
+      dockerfile: ./vertisim/Dockerfile
     ports:
       - "5001:5001"
     networks:

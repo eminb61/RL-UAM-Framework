@@ -18,19 +18,17 @@
             "status"
         ],
         "fleet_rebalancing": true,
-        "save_trajectories": false,
+        "save_trajectories": true,
         "only_aircraft_simulation": false,
         "network_simulation": true,
         "verbose": true,
         "training_data_collection": false
     },
-
     "sim_mode": {
         "ondemand": true,
         "offline_optimization": false,
         "client_server": false
     },
-
     "external_optimization_params": {
         "flight_duration_constant": null,
         "charge_assignment_sensitivity": null,
@@ -42,13 +40,13 @@
         "num_environmental_state_variables": 0,
         "num_additional_state_variables": 1,
         "num_actions": 3,
-        "soc_increment": 20,
+        "soc_increment_per_charge_event": 20,
         "stopping_events": [
             "passenger_arrival_event",
             "aircraft_parking_pad_arrival_event",
             "charging_end_event"
         ],
-        "truncation_events":[
+        "truncation_events": [
             "soc_at_zero_event",
             "infeasible_charge_truncation_event",
             "overcharge_truncation_event",
@@ -65,18 +63,17 @@
             "charge_reward": 1
         }
     },
-
     "network_and_demand_params": {
         "vertiport_network_file_path": "vertisim/vertisim/input/supernal_input/network_HHR_Warner.csv",
-        "vertiport_layout_file_path": "vertisim/vertisim/input/supernal_input/vertiport_layout.xls",
+        "vertiport_layout_file_path": "vertisim/vertisim/input/supernal_input/vertiport_layout_supernal_fake.xlsx",
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
         "passenger_schedule_file_path": null,
-        "passenger_arrival_rates_path": "vertisim/vertisim/input/supernal_input/passenger_arrival_rates_HHR_Warner.csv",
+        "passenger_arrival_rates_path": "vertisim/vertisim/input/supernal_input/passenger_arrival_rates_HHR_Warner_24.csv",
         "demand_probabilities": null,
         "vertiports": {
             "HHR": {
-                "layout": "clover_1_fato_4_park_hhr",
+                "layout": "clover_1_fato_6_park_hhr_fake",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 8,
@@ -95,12 +92,12 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_in_vertiport": 3,
+                    "num_initial_aircraft_in_vertiport": 5,
                     "initial_arrival_queue_state": 0
                 }
             },
             "WARNER": {
-                "layout": "clover_1_fato_4_park_warner",
+                "layout": "clover_1_fato_6_park_warner_fak",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 8,
@@ -119,22 +116,22 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_in_vertiport": 3,
+                    "num_initial_aircraft_in_vertiport": 5,
                     "initial_arrival_queue_state": 0
                 }
             }
         }
     },
     "airspace_params": {
-        "airspace_layout_file_path": "vertisim/vertisim/input/supernal_input/SupernalHRRWarnerRoute.csv",
+        "airspace_layout_file_path": "vertisim/vertisim/input/supernal_input/SupernalHRRWarnerRoute_vertiport_altitude_0.csv",
         "airspace_layout_sheet_name": null,
         "airlink_capacity": 1,
         "airlink_segment_length": 1,
-        "holding_unit_capacity": 20, 
-        "cruise_altitude": 450,  
-        "static_wind": "relative_to_north", 
-        "wind_magnitude_mph": 50,
-        "wind_angle_degrees": 90, 
+        "holding_unit_capacity": 20,
+        "cruise_altitude": 450,
+        "static_wind": "relative_to_north",
+        "wind_magnitude_mph": 0,
+        "wind_angle_degrees": 0,
         "wind_data_file_path": "vertisim/vertisim/input/supernal_input/HHR_WARNER_WIND.csv"
     },
     "passenger_params": {
@@ -162,10 +159,10 @@
         "climb_transition_end_forward_velocity": 18,
         "climb_transition_vertical_velocity": 1.5,
         "climb_phase_end_forward_velocity": 45,
-        "climb_phase_vertical_velocity": 3.125,
+        "climb_phase_vertical_velocity": 3.9,
         "cruise_speed": 67,
         "descend_phase_end_forward_velocity": 36,
-        "descend_phase_vertical_velocity": 3.8,
+        "descend_phase_vertical_velocity": 3,
         "descend_transition_end_forward_velocity": 0,
         "descend_transition_vertical_velocity": 3.8,
         "max_vertical_velocity": 5,
@@ -218,11 +215,11 @@
         "min_reserve_soc": 40
     },
     "output_params": {
-        "output_folder_path": "../../output/results",
+        "output_folder_path": "../output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
         "state_trajectory_db_name": "state_trajectory_db",
-        "state_trajectory_db_tablename": "training_data_collection", 
+        "state_trajectory_db_tablename": "training_data_collection",
         "performance_metrics": [
             "passenger_waiting_time",
             "aircraft_holding_time",
