@@ -75,7 +75,7 @@
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
         "passenger_schedule_file_path": null,
-        "passenger_arrival_rates_path": "vertisim/vertisim/input/passenger/passenger_arrival_rates_sfo_mv_test.csv",
+        "passenger_arrival_rates_path": "vertisim/vertisim/input/passenger/passenger_arrival_rates_sfo_mv_training_scaled.csv",
         "demand_probabilities": null,
         "vertiports": {
             "SFO": {
