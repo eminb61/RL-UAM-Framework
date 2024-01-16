@@ -1,0 +1,19 @@
+{
+    "rl_model": "MaskableRecurrentPPO",
+    "parameters": {
+        "learning_rate": {"values": [0.00004, 0.0006, 0.004]},
+        "gamma": {"values": [0.95, 0.99]},
+        "batch_size": {"values": [128, 256, 512]},
+        "clip_range": {"values": [0.2, 0.3]},
+        "clip_range_vf": {"values": [null]},
+        "activation_fn": {"values": ["ReLU"]},
+        "n_steps": {"values": [256, 512, 1024]},
+        "hidden_layers": {"values": [[64, 64], [128, 128],
+                                    [64, 64, 64], [128, 128, 128]]},
+        "lstm_hidden_size": {"values": [128, 256]},
+        "n_lstm_layers": {"values": [1, 2]},
+        "ent_coef": {"values": [0.002, 0.0001]},
+        "total_steps": {"values": [512000]},
+        "seed": {"values": [0, 1, 2]}
+    }
+}

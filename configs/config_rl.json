@@ -27,7 +27,8 @@
     "sim_mode": {
         "ondemand": false,
         "offline_optimization": false,
-        "client_server": true
+        "rl": true,
+        "client_server": false
     },
     "external_optimization_params": {
         "flight_duration_constant": null,
@@ -38,7 +39,7 @@
         "num_vertiport_state_variables": 2,
         "num_aircraft_state_variables": 6,
         "num_environmental_state_variables": 0,
-        "num_additional_state_variables": 1,
+        "num_additional_state_variables": 0,
         "num_actions": 3,
         "soc_increment_per_charge_event": 10,
         "stopping_events": [
@@ -55,7 +56,7 @@
         "truncation": true,
         "reward_function_parameters": {
             "waiting_time_cost_type": "linear",
-            "waiting_time_cost_unit": "hour",
+            "waiting_time_cost_unit": "minute",
             "waiting_time_cost": -1,
             "trip_reward": 15,
             "flight_cost": -1,
@@ -63,7 +64,13 @@
             "truncation_penalty": -100000,
             "completion_reward": 0,
             "charge_reward": 1,
-            "soc_reward_threshold": 80
+            "soc_reward_threshold": 80,
+            "waiting_full_pax_but_charge_penalty": -5,
+            "waiting_full_pax_but_do_nothing_penalty": -10,
+            "no_pax_and_do_nothing_reward": 5,
+            "no_pax_and_charge_reward": 10,
+            "empty_flight_penalty": -10,
+            "holding_penalty": -10
         }
     },
     "network_and_demand_params": {
@@ -72,7 +79,7 @@
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
         "passenger_schedule_file_path": null,
-        "passenger_arrival_rates_path": "vertisim/vertisim/input/passenger/passenger_arrival_rates_sfo_mv_test.csv",
+        "passenger_arrival_rates_path": "vertisim/vertisim/input/passenger/passenger_arrival_rates_sfo_mv_test2.csv",
         "demand_probabilities": null,
         "vertiports": {
             "SFO": {
@@ -133,7 +140,7 @@
         "holding_unit_capacity": 20, 
         "cruise_altitude": 450,  
         "static_wind": "relative_to_north", 
-        "wind_magnitude_mph": 30,
+        "wind_magnitude_mph": 0,
         "wind_angle_degrees": 3.14159, 
         "wind_data_file_path": "vertisim/vertisim/input/airspace/SFBayArea_wind_data.csv"
     },

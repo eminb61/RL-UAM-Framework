@@ -8,7 +8,6 @@
         "random_seed": 42,
         "max_passenger_waiting_time": 600,
         "simulation_states": [
-            "num_available_parking_pad",
             "num_waiting_passengers",
             "total_passenger_waiting_time",
             "flight_direction",
@@ -16,8 +15,7 @@
             "soc",
             "time_to_arrival",
             "num_passengers",
-            "status",
-            "is_process_completed"
+            "status"
         ],
         "fleet_rebalancing": true,
         "save_trajectories": false,
@@ -26,10 +24,10 @@
         "verbose": true,
         "training_data_collection": false
     },
-
     "sim_mode": {
         "ondemand": true,
         "offline_optimization": false,
+        "rl": false,
         "client_server": false
     },
     "external_optimization_params": {
@@ -38,10 +36,10 @@
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
         "soc_adjustment": null,
-        "num_vertiport_state_variables": 3,
-        "num_aircraft_state_variables": 7,
+        "num_vertiport_state_variables": 2,
+        "num_aircraft_state_variables": 6,
         "num_environmental_state_variables": 0,
-        "num_additional_state_variables": 1,
+        "num_additional_state_variables": 0,
         "num_actions": 3,
         "soc_increment_per_charge_event": 10,
         "stopping_events": [
@@ -75,7 +73,7 @@
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
         "passenger_schedule_file_path": null,
-        "passenger_arrival_rates_path": "vertisim/vertisim/input/passenger/passenger_arrival_rates_sfo_mv_training_scaled.csv",
+        "passenger_arrival_rates_path": "vertisim/vertisim/input/passenger/passenger_arrival_rates_sfo_mv_test2.csv",
         "demand_probabilities": null,
         "vertiports": {
             "SFO": {
@@ -135,7 +133,7 @@
         "airlink_segment_length": 1,
         "holding_unit_capacity": 20, 
         "cruise_altitude": 450,  
-        "static_wind": "relative_to_north", 
+        "static_wind": false, 
         "wind_magnitude_mph": 30,
         "wind_angle_degrees": 3.14159, 
         "wind_data_file_path": "vertisim/vertisim/input/airspace/SFBayArea_wind_data.csv"
@@ -218,10 +216,10 @@
         "aircraft_energy_consumption_data_folder_path": "vertisim/vertisim/input/aircraft/energy_consumption",
         "min_init_soc": 20,
         "max_init_soc": 80,
-        "min_reserve_soc": 40
+        "min_reserve_soc": 35
     },
     "output_params": {
-        "output_folder_path": "../../output/results",
+        "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
         "state_trajectory_db_name": "state_trajectory_db",

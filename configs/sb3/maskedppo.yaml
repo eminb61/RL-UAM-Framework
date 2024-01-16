@@ -1,0 +1,13 @@
+rl_model: "MaskablePPO"
+seed: 1
+hidden_layers: [128, 128]
+activation_fn: "ReLU"
+learning_rate: 0.00079
+n_steps: 2048
+batch_size: 512
+ent_coef: 0.0075
+gamma: 0.978
+total_steps: 512000
+clip_range: 0.41
+clip_range_vf: 0.4571
+
