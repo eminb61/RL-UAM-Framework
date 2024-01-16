@@ -1,6 +1,7 @@
 {
     "rl_model": "MaskableRecurrentPPO",
     "tuning_library": "Optuna",
+    "learning_scheduler": "constant",
     "parameters": {
         "learning_rate": {
             "min": 0.00001,
