@@ -1,4 +1,5 @@
 rl_model: "MaskableRecurrentPPO"
+learning_scheduler: "constant"
 seed: 1
 hidden_layers: [128, 128]
 activation_fn: "tanh"

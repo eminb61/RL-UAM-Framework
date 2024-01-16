@@ -15,7 +15,8 @@
             "soc",
             "time_to_arrival",
             "num_passengers",
-            "status"
+            "status",
+            "is_first_time_charge"
         ],
         "fleet_rebalancing": true,
         "save_trajectories": false,
