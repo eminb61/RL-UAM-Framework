@@ -130,3 +130,6 @@ dmypy.json
 
 # MacOS Random Files
 ._*
+
+# TensorBoard log files
+event.out.tfevents*

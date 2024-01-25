@@ -1,7 +1,8 @@
 rl_model: "MaskablePPO"
 learning_scheduler: "constant"
 seed: 1
-hidden_layers: [128, 128]
+hidden_layers: 128
+n_hidden_layers: 2
 activation_fn: "ReLU"
 learning_rate: 0.00079
 n_steps: 2048

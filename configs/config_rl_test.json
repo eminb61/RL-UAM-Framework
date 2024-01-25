@@ -6,7 +6,7 @@
         "simultaneous_taxi_and_take_off": true,
         "num_initial_passengers": 0,
         "random_seed": 42,
-        "logging": false,
+        "logging": true,
         "log_level": "error",
         "max_passenger_waiting_time": 600,
         "simulation_states": [
@@ -39,7 +39,7 @@
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
         "soc_adjustment": null,
-        "num_parallel_envs": 1,
+        "num_parallel_envs": 1,        
         "num_vertiport_state_variables": 3,
         "num_aircraft_state_variables": 6,
         "num_environmental_state_variables": 0,
@@ -61,7 +61,7 @@
         "reward_function_parameters": {
             "waiting_time_cost_type": "exponential",
             "waiting_time_cost_unit": "minute",
-            "waiting_time_cost": -1,
+            "waiting_time_cost": -0.5,
             "trip_reward": 30,
             "flight_cost": -2,
             "spill_cost": -1000,
@@ -73,7 +73,7 @@
             "no_pax_and_do_nothing_reward": 1,
             "no_pax_and_charge_reward": 2,
             "holding_penalty": -10,
-            "unnecessary_flight_penalty": -50,
+            "unnecessary_flight_penalty": -100,
             "repositioning_reward": 10
         }
     },

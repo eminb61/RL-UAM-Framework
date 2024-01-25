@@ -1,15 +1,16 @@
 rl_model: "MaskableRecurrentPPO"
-learning_scheduler: "constant"
+learning_scheduler: "linear"
 seed: 1
-hidden_layers: [128, 128]
-activation_fn: "tanh"
-learning_rate: 0.000275
+hidden_layers: 128
+n_hidden_layers: 2
+activation_fn: "ReLU"
+learning_rate: 0.004
 n_steps: 512
-batch_size: 256
-ent_coef: 0.0035
-gamma: 0.94
+batch_size: 128
+ent_coef: 0.005
+gamma: 0.99
 total_steps: 1000000
-clip_range: 0.38
-clip_range_vf: 0.27
-lstm_hidden_size: 64
-n_lstm_layers: 3
+clip_range: 0.26
+clip_range_vf: 0.20
+lstm_hidden_size: 256
+n_lstm_layers: 2
