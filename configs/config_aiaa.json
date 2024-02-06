@@ -95,7 +95,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_in_vertiport": 3,
+                    "num_initial_aircraft_at_vertiport": 3,
                     "initial_arrival_queue_state": 0
                 }
             },
@@ -119,7 +119,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_in_vertiport": 3,
+                    "num_initial_aircraft_at_vertiport": 3,
                     "initial_arrival_queue_state": 0
                 }
             }
@@ -129,7 +129,7 @@
         "airspace_layout_file_path": "vertisim/vertisim/input/airspace/sfo_sjc_route.csv",
         "airspace_layout_sheet_name": null,
         "airlink_capacity": 1,
-        "airlink_segment_length": 1,
+        "airlink_segment_length_mile": 1,
         "holding_unit_capacity": 20, 
         "cruise_altitude": 450,  
         "static_wind": "relative_to_north", 

@@ -7,19 +7,29 @@
         "num_initial_passengers": 0,
         "random_seed": 42,
         "logging": true,
-        "log_level": "error",
+        "log_level": "warning",
         "max_passenger_waiting_time": 600,
-        "simulation_states": [
-            "num_waiting_passengers",
-            "total_passenger_waiting_time",
-            "expected_pax",
-            "flight_direction",
-            "location",
-            "soc",
-            "num_passengers",
-            "status",
-            "is_first_time_charge"
-        ],
+        "simulation_states": {
+            "vertiport_states": [
+                "num_waiting_passengers",
+                "total_passenger_waiting_time",
+                "expected_pax",
+                "num_available_parking_pad"
+            ],
+            "aircraft_states": [
+                "flight_direction",
+                "location",
+                "soc",
+                "holding_time",
+                "num_passengers",
+                "status",
+                "is_first_time_charge"
+            ],
+            "environmental_states": [],
+            "additional_states": [
+                "sim_time"
+            ]
+        },
         "fleet_rebalancing": true,
         "save_trajectories": false,
         "only_aircraft_simulation": false,
@@ -38,14 +48,11 @@
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "soc_adjustment": null,
-        "num_parallel_envs": 1,        
-        "num_vertiport_state_variables": 3,
-        "num_aircraft_state_variables": 6,
-        "num_environmental_state_variables": 0,
-        "num_additional_state_variables": 1,
-        "soc_increment_per_charge_event": 10,
-        "optuna_db_url": "postgresql://emin:emin@localhost/rluam",
+        "optuna_db_url": "postgresql://emin:emin@localhost/rluam",        
+        "num_parallel_envs": 1,
+        "soc_increment_per_charge_event": null,
+        "charge_time_per_charge_event": 600,
+        "periodic_time_step": null,
         "stopping_events": [
             "passenger_arrival_event",
             "aircraft_parking_pad_arrival_event",
@@ -59,39 +66,40 @@
         ],
         "truncation": true,
         "reward_function_parameters": {
-            "waiting_time_cost_type": "exponential",
+            "waiting_time_cost_type": "linear",
             "waiting_time_cost_unit": "minute",
-            "waiting_time_cost": -0.5,
-            "trip_reward": 30,
-            "flight_cost": -2,
+            "waiting_time_cost": -1,
+            "trip_reward": 10,
+            "flight_cost": -1,
             "spill_cost": -1000,
             "truncation_penalty": -100000,
             "charge_reward": 1,
             "soc_reward_threshold": 80,
-            "waiting_full_pax_but_charge_penalty": -5,
-            "waiting_full_pax_but_do_nothing_penalty": -10,
+            "waiting_full_pax_but_charge_penalty": -2,
+            "waiting_full_pax_but_do_nothing_penalty": -4,
             "no_pax_and_do_nothing_reward": 1,
             "no_pax_and_charge_reward": 2,
-            "holding_penalty": -10,
-            "unnecessary_flight_penalty": -100,
+            "holding_penalty": -5,
+            "unnecessary_flight_penalty": -20,
             "repositioning_reward": 10
         }
     },
     "network_and_demand_params": {
-        "vertiport_network_file_path": "vertisim/vertisim/input/network/network_SFO_MV.csv",
+        "vertiport_network_file_path": "vertisim/vertisim/input/network/network_LAX_DTLA.csv",
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "passenger_schedule_file_path": null,
-        "passenger_arrival_rates_path": "vertisim/vertisim/input/passenger/passenger_arrival_rates_sfo_mv_test2.csv",
+        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/pax_arrival_times_1500pax_5min_0205.csv",
+        "passenger_arrival_rates_path": null,
+        "autoregressive_demand_files_path": null,
         "demand_probabilities": null,
         "demand_lookahead_time": 600,
         "vertiports": {
-            "SFO": {
-                "layout": "clover_1_fato_8_park_sfo",
+            "LAX": {
+                "layout": "clover_1_fato_10_park_lax",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
-                "num_chargers": 8,
+                "num_chargers": 10,
                 "charger_max_charge_rate": 350,
                 "charger_efficiency": 0.9,
                 "shared_charger_sets": null,
@@ -107,15 +115,15 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_in_vertiport": 2,
+                    "num_initial_aircraft_at_vertiport": 5,
                     "initial_arrival_queue_state": 0
                 }
             },
-            "MV": {
-                "layout": "clover_1_fato_8_park_mv",
+            "DTLA": {
+                "layout": "clover_1_fato_12_park_dtla",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
-                "num_chargers": 8,
+                "num_chargers": 12,
                 "charger_max_charge_rate": 350,
                 "charger_efficiency": 0.9,
                 "shared_charger_sets": null,
@@ -131,7 +139,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_in_vertiport": 2,
+                    "num_initial_aircraft_at_vertiport": 8,
                     "initial_arrival_queue_state": 0
                 }
             }
@@ -139,9 +147,8 @@
     },
     "airspace_params": {
         "airspace_layout_file_path": null,
-        "airspace_layout_sheet_name": null,
         "airlink_capacity": 1,
-        "airlink_segment_length": 1,
+        "airlink_segment_length_mile": 1,
         "holding_unit_capacity": 20, 
         "cruise_altitude": 450,  
         "static_wind": "relative_to_north", 
@@ -216,7 +223,7 @@
         "eta_cruise": 0.9,
         "atmosphere_condition": "good",
         "time_charging": null,
-        "target_soc_constant": 60,
+        "target_soc_constant": null,
         "charging_time_dist": {
             "distribution_name": "expon",
             "parameters": {
@@ -224,7 +231,7 @@
             },
             "max_val_in_dist": null
         },
-        "aircraft_energy_consumption_data_folder_path": "vertisim/vertisim/input/aircraft/energy_consumption",
+        "aircraft_energy_consumption_data_folder_path": null,
         "min_init_soc": 20,
         "max_init_soc": 80,
         "min_reserve_soc": 35

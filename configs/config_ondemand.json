@@ -1,11 +1,13 @@
 {
     "sim_params": {
-        "max_sim_time": 216000,
+        "max_sim_time": 55296000,
         "arrival_priority": 1,
         "departure_priority": 1,
         "simultaneous_taxi_and_take_off": true,
         "num_initial_passengers": 0,
         "random_seed": 42,
+        "logging": false,
+        "log_level": "info",
         "max_passenger_waiting_time": 600,
         "simulation_states": [
             "num_available_parking_pad",
@@ -28,6 +30,7 @@
     "sim_mode": {
         "ondemand": true,
         "offline_optimization": false,
+        "rl": false,
         "client_server": false
     },
 
@@ -95,7 +98,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_in_vertiport": 2,
+                    "num_initial_aircraft_at_vertiport": 2,
                     "initial_arrival_queue_state": 0
                 }
             },
@@ -119,7 +122,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_in_vertiport": 2,
+                    "num_initial_aircraft_at_vertiport": 2,
                     "initial_arrival_queue_state": 0
                 }
             }
@@ -129,7 +132,7 @@
         "airspace_layout_file_path": null,
         "airspace_layout_sheet_name": null,
         "airlink_capacity": 1,
-        "airlink_segment_length": 1,
+        "airlink_segment_length_mile": 1,
         "holding_unit_capacity": 20, 
         "cruise_altitude": 450,  
         "static_wind": "relative_to_north", 

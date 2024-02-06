@@ -29,7 +29,7 @@
             "min": 0.00001,
             "max": 0.01
         },
-        "total_steps": {"values": [307200]},
+        "total_steps": {"values": [3007200]},
         "seed": {"values": [0, 1, 2]}
     }
 
