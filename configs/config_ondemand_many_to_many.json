@@ -6,20 +6,31 @@
         "simultaneous_taxi_and_take_off": true,
         "num_initial_passengers": 0,
         "random_seed": 42,
+        "logging": false,
+        "log_level": "error",
         "max_passenger_waiting_time": 600,
-        "simulation_states": [
-            "num_waiting_passengers",
-            "total_passenger_waiting_time",
-            "expected_pax",
-            "flight_direction",
-            "location",
-            "soc",
-            "num_passengers",
-            "status",
-            "is_first_time_charge"
-        ],
+        "simulation_states": {
+            "vertiport_states": [
+                "num_waiting_passengers",
+                "total_passenger_waiting_time",
+                "num_available_parking_pad"
+            ],
+            "aircraft_states": [
+                "flight_direction",
+                "location",
+                "soc",
+                "holding_time",
+                "num_passengers",
+                "status",
+                "is_first_time_charge"
+            ],
+            "environmental_states": [],
+            "additional_states": [
+                "sim_time"
+            ]
+        },
         "fleet_rebalancing": true,
-        "save_trajectories": false,
+        "save_trajectories": true,
         "only_aircraft_simulation": false,
         "network_simulation": true,
         "verbose": false,
@@ -36,13 +47,11 @@
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "soc_adjustment": null,
-        "num_vertiport_state_variables": 3,
-        "num_aircraft_state_variables": 6,
-        "num_environmental_state_variables": 0,
-        "num_additional_state_variables": 1,
-        "num_actions": 6,
-        "soc_increment_per_charge_event": 10,
+        "optuna_db_url": "postgresql://emin:emin@localhost/rluam",        
+        "num_parallel_envs": 1,
+        "soc_increment_per_charge_event": null,
+        "charge_time_per_charge_event": 600,
+        "periodic_time_step": 60,
         "stopping_events": [
             "passenger_arrival_event",
             "aircraft_parking_pad_arrival_event",
@@ -58,20 +67,20 @@
         "reward_function_parameters": {
             "waiting_time_cost_type": "linear",
             "waiting_time_cost_unit": "minute",
-            "waiting_time_cost": -0.3,
-            "trip_reward": 200,
-            "flight_cost": -150,
+            "waiting_time_cost": -1,
+            "trip_reward": 10,
+            "flight_cost": -1,
             "spill_cost": -1000,
             "truncation_penalty": -100000,
-            "completion_reward": 0,
             "charge_reward": 1,
             "soc_reward_threshold": 80,
-            "waiting_full_pax_but_charge_penalty": -5,
-            "waiting_full_pax_but_do_nothing_penalty": -10,
-            "no_pax_and_do_nothing_reward": 5,
-            "no_pax_and_charge_reward": 10,
-            "empty_flight_penalty": -10,
-            "holding_penalty": -10
+            "waiting_full_pax_but_charge_penalty": -2,
+            "waiting_full_pax_but_do_nothing_penalty": -4,
+            "no_pax_and_do_nothing_reward": 1,
+            "no_pax_and_charge_reward": 2,
+            "holding_penalty": -5,
+            "unnecessary_flight_penalty": -20,
+            "repositioning_reward": 10
         }
     },
     "network_and_demand_params": {
@@ -81,6 +90,7 @@
         "flight_schedule_file_path": null,
         "passenger_schedule_file_path": null,
         "passenger_arrival_rates_path": "vertisim/vertisim/input/passenger/passenger_arrival_rates_full_network_test.csv",
+        "autoregressive_demand_files_path": null,        
         "demand_probabilities": null,
         "demand_lookahead_time": 600,
         "vertiports": {
@@ -104,7 +114,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 2,
+                    "num_initial_aircraft_at_vertiport": 4,
                     "initial_arrival_queue_state": 0
                 }
             },
@@ -128,12 +138,12 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 2,
+                    "num_initial_aircraft_at_vertiport": 4,
                     "initial_arrival_queue_state": 0
                 }
             },
             "SJ": {
-                "layout": "clover_1_fato_8_park_sj",
+                "layout": "clover_1_fato_6_park_sj",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 8,
@@ -152,12 +162,12 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 2,
+                    "num_initial_aircraft_at_vertiport": 3,
                     "initial_arrival_queue_state": 0
                 }
             },        
             "STOCKTON": {
-                "layout": "clover_1_fato_8_park_stockton",
+                "layout": "clover_1_fato_6_park_stockton",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 8,
@@ -176,14 +186,14 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 2,
+                    "num_initial_aircraft_at_vertiport": 3,
                     "initial_arrival_queue_state": 0
                 }
             }                 
         }
     },
     "airspace_params": {
-        "airspace_layout_file_path": null,
+        "airspace_layout_file_path": "vertisim/vertisim/input/airspace/sfo_richmond_sj_stockton.csv",
         "airspace_layout_sheet_name": null,
         "airlink_capacity": 1,
         "airlink_segment_length_mile": 1,

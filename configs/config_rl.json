@@ -13,7 +13,6 @@
             "vertiport_states": [
                 "num_waiting_passengers",
                 "total_passenger_waiting_time",
-                "expected_pax",
                 "num_available_parking_pad"
             ],
             "aircraft_states": [
@@ -52,7 +51,7 @@
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 600,
-        "periodic_time_step": null,
+        "periodic_time_step": 60,
         "stopping_events": [
             "passenger_arrival_event",
             "aircraft_parking_pad_arrival_event",

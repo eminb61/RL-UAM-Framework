@@ -21,4 +21,3 @@ PyYAML
 optuna
 optuna_distributed
 wandb
-psycopg2

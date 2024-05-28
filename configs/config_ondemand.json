@@ -6,8 +6,8 @@
         "simultaneous_taxi_and_take_off": true,
         "num_initial_passengers": 0,
         "random_seed": 42,
-        "logging": false,
-        "log_level": "error",
+        "logging": true,
+        "log_level": "debug",
         "max_passenger_waiting_time": 600,
         "simulation_states": {
             "vertiport_states": [
@@ -31,7 +31,7 @@
             ]
         },
         "fleet_rebalancing": true,
-        "save_trajectories": false,
+        "save_trajectories": true,
         "only_aircraft_simulation": false,
         "network_simulation": true,
         "verbose": false,
@@ -93,7 +93,7 @@
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
         "passenger_schedule_file_path": null,
-        "passenger_arrival_rates_path": "vertisim/vertisim/input/passenger/passenger_arrival_rates_sfo_mv_test.csv",
+        "passenger_arrival_rates_path": "vertisim/vertisim/input/passenger/passenger_arrival_rates_sfo_mv_long.csv",
         "autoregressive_demand_files_path": null,        
         "demand_probabilities": null,
         "vertiports": {

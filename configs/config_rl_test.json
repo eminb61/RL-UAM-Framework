@@ -7,7 +7,7 @@
         "num_initial_passengers": 0,
         "random_seed": 42,
         "logging": true,
-        "log_level": "warning",
+        "log_level": "error",
         "max_passenger_waiting_time": 600,
         "simulation_states": {
             "vertiport_states": [
