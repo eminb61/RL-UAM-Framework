@@ -18,6 +18,7 @@
             "aircraft_states": [
                 "flight_direction",
                 "location",
+                "time_to_arrival",
                 "soc",
                 "holding_time",
                 "num_passengers",
@@ -44,6 +45,7 @@
     },
     "external_optimization_params": {
         "flight_duration_constant": null,
+        "soc_decrement_constant": null,
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
@@ -51,7 +53,7 @@
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 600,
-        "periodic_time_step": 60,
+        "periodic_time_step": null,
         "stopping_events": [
             "passenger_arrival_event",
             "aircraft_parking_pad_arrival_event",
@@ -84,18 +86,18 @@
         }
     },
     "network_and_demand_params": {
-        "vertiport_network_file_path": "vertisim/vertisim/input/network/network_LAX_DTLA.csv",
+        "vertiport_network_file_path": "vertisim/vertisim/input/network/network_SFO_SJ.csv",
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/pax_arrival_times_1500pax_5min_0205.csv",
+        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/rl_paper_two_vertiport_demand_sfo_sj.csv",
         "passenger_arrival_rates_path": null,
         "autoregressive_demand_files_path": null,
         "demand_probabilities": null,
         "demand_lookahead_time": 600,
         "vertiports": {
-            "LAX": {
-                "layout": "clover_1_fato_10_park_lax",
+            "SFO": {
+                "layout": "clover_1_fato_6_park_sfo",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 10,
@@ -118,8 +120,8 @@
                     "initial_arrival_queue_state": 0
                 }
             },
-            "DTLA": {
-                "layout": "clover_1_fato_12_park_dtla",
+            "SJ": {
+                "layout": "clover_1_fato_9_park_sj",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 12,
@@ -221,6 +223,7 @@
         "eta_descend": 0.85,
         "eta_cruise": 0.9,
         "atmosphere_condition": "good",
+        "soc_update_interval": 30,
         "time_charging": null,
         "target_soc_constant": null,
         "charging_time_dist": {

@@ -31,7 +31,7 @@
             ]
         },
         "fleet_rebalancing": false,
-        "save_trajectories": true,
+        "save_trajectories": false,
         "only_aircraft_simulation": false,
         "network_simulation": true,
         "verbose": true,
@@ -226,6 +226,7 @@
         "eta_descend": 0.85,
         "eta_cruise": 0.9,
         "atmosphere_condition": "good",
+        "soc_update_interval": 30,        
         "time_charging": null,
         "target_soc_constant": 60,
         "charging_time_dist": {

@@ -92,8 +92,8 @@
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/demand_SFO_SJ.csv",
-        "passenger_arrival_rates_path": null,
+        "passenger_schedule_file_path": null,
+        "passenger_arrival_rates_path": "vertisim/vertisim/input/passenger/passenger_arrival_rates_sfo_sj.csv",
         "autoregressive_demand_files_path": null,        
         "demand_probabilities": null,
         "vertiports": {
@@ -117,12 +117,12 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 2,
+                    "num_initial_aircraft_at_vertiport": 8,
                     "initial_arrival_queue_state": 0
                 }
             },
             "SJ": {
-                "layout": "clover_1_fato_8_park_sj",
+                "layout": "clover_1_fato_4_park_sj",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 8,
@@ -141,7 +141,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 2,
+                    "num_initial_aircraft_at_vertiport": 4,
                     "initial_arrival_queue_state": 0
                 }
             }
@@ -225,6 +225,7 @@
         "eta_descend": 0.85,
         "eta_cruise": 0.9,
         "atmosphere_condition": "good",
+        "soc_update_interval": 30,
         "time_charging": null,
         "target_soc_constant": 60,
         "charging_time_dist": {
