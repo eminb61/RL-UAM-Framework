@@ -207,7 +207,7 @@
         "time_post_landing_safety_checks": 0,
         "ground_taxi_speed": 3.67,
         "time_passenger_embark_disembark": 120,
-        "time_pre_charging_processes": 180,
+        "time_pre_charging_processes": 300,
         "time_charging_plug_disconnection": 0,
         "time_post_charging_processes": 180,
         "mtom": 2182,
