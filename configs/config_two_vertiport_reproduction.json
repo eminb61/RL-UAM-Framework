@@ -1,6 +1,6 @@
 {
     "sim_params": {
-        "max_sim_time": 55296000,
+        "max_sim_time": 552960000,
         "arrival_priority": 1,
         "departure_priority": 1,
         "simultaneous_taxi_and_take_off": true,
@@ -30,7 +30,7 @@
                 "sim_time"
             ]
         },
-        "fleet_rebalancing": true,
+        "fleet_rebalancing": false,
         "save_trajectories": true,
         "only_aircraft_simulation": false,
         "network_simulation": true,
@@ -39,17 +39,18 @@
     },
 
     "sim_mode": {
-        "ondemand": true,
-        "offline_optimization": false,
+        "ondemand": false,
+        "offline_optimization": true,
         "rl": false,
         "client_server": false
     },
 
     "external_optimization_params": {
-        "flight_duration_constant": null,
-        "charge_assignment_sensitivity": null,
-        "charge_schedule_file_path": null,
-        "flight_schedule_file_path": null,
+        "flight_duration_constant": 1200,
+        "soc_decrement_constant": 22.5,
+        "charge_assignment_sensitivity": 2.4,
+        "charge_schedule_file_path": "vertisim/vertisim/input/aircraft/charge_schedule_06_06_500pax_sfo_sj.csv",
+        "flight_schedule_file_path": "vertisim/vertisim/input/aircraft/flight_schedule_06_06_500pax_sfo_sj.csv",
         "optuna_db_url": "postgresql://emin:emin@localhost/rluam",        
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
@@ -90,18 +91,18 @@
     "network_and_demand_params": {
         "vertiport_network_file_path": "vertisim/vertisim/input/network/network_SFO_SJ.csv",
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
-        "charge_schedule_file_path": null,
-        "flight_schedule_file_path": null,
-        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/demand_SFO_SJ.csv",
+        "charge_schedule_file_path": "vertisim/vertisim/input/aircraft/charge_schedule_06_06_500pax_sfo_sj.csv",
+        "flight_schedule_file_path": "vertisim/vertisim/input/aircraft/flight_schedule_06_06_500pax_sfo_sj.csv",
+        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/rl_paper_two_vertiport_demand_sfo_sj.csv",
         "passenger_arrival_rates_path": null,
         "autoregressive_demand_files_path": null,        
         "demand_probabilities": null,
         "vertiports": {
             "SFO": {
-                "layout": "clover_1_fato_8_park_sfo",
+                "layout": "clover_1_fato_6_park_sfo",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
-                "num_chargers": 8,
+                "num_chargers": 10,
                 "charger_max_charge_rate": 350,
                 "charger_efficiency": 0.9,
                 "shared_charger_sets": null,
@@ -122,10 +123,10 @@
                 }
             },
             "SJ": {
-                "layout": "clover_1_fato_8_park_sj",
+                "layout": "clover_1_fato_9_park_sj",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
-                "num_chargers": 8,
+                "num_chargers": 14,
                 "charger_max_charge_rate": 350,
                 "charger_efficiency": 0.9,
                 "shared_charger_sets": null,
@@ -209,9 +210,9 @@
         "time_post_landing_safety_checks": 0,
         "ground_taxi_speed": 3.67,
         "time_passenger_embark_disembark": 120,
-        "time_pre_charging_processes": 180,
+        "time_pre_charging_processes": 300,
         "time_charging_plug_disconnection": 0,
-        "time_post_charging_processes": 180,
+        "time_post_charging_processes": 0,
         "mtom": 2182,
         "wing_area": 13,
         "disk_load": 45.9,
