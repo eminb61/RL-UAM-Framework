@@ -1,9 +1,9 @@
 [submodule "service-orchestrator"]
 	path = service-orchestrator
 	url = https://github.com/eminb61/service-orchestrator.git
-[submodule "VertiSim"]
-	path = VertiSim
-	url = https://github.com/eminb61/VertiSim.git
 [submodule "RL-UAM"]
 	path = RL-UAM
 	url = https://github.com/eminb61/RL-UAM.git
+[submodule "vertisim"]
+	path = vertisim
+	url = https://github.com/eminb61/vertisim
