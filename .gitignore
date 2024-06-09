@@ -132,4 +132,7 @@ dmypy.json
 ._*
 
 # TensorBoard log files
-event.out.tfevents*
+events.out.tfevents*
+
+# Ignore zip files
+*.zip
