@@ -35,7 +35,7 @@
         "only_aircraft_simulation": false,
         "network_simulation": true,
         "verbose": false,
-        "print_brief_metrics": false,
+        "print_brief_metrics": true,
         "training_data_collection": false
     },
     "sim_mode": {
@@ -89,15 +89,14 @@
     "network_and_demand_params": {
         "vertiport_network_file_path": "vertisim/vertisim/input/network/network_SFO_SJ.csv",
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
-        "passenger_schedule_file_path": null,
+        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/rl_paper_two_vertiport_demand_sfo_sj.csv",
         "passenger_arrival_rates_path": null,
-        "pick_demand_files_path": "vertisim/vertisim/input/passenger/autoregressive_demand/SFO_SJ",
         "autoregressive_demand_files_path": null,
         "demand_probabilities": null,
         "demand_lookahead_time": 600,
         "vertiports": {
             "SFO": {
-                "layout": "clover_1_fato_7_park_sfo",
+                "layout": "clover_1_fato_6_park_sfo",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 10,
@@ -121,7 +120,7 @@
                 }
             },
             "SJ": {
-                "layout": "clover_1_fato_11_park_sj",
+                "layout": "clover_1_fato_9_park_sj",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 12,
