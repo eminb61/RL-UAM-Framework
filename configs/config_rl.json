@@ -91,6 +91,7 @@
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
         "passenger_schedule_file_path": null,
         "passenger_arrival_rates_path": null,
+        "pick_rate_files_path": null,
         "pick_demand_files_path": "vertisim/vertisim/input/passenger/autoregressive_demand/SFO_SJ",
         "autoregressive_demand_files_path": null,
         "demand_probabilities": null,
