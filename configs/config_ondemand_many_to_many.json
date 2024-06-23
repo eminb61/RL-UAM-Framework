@@ -4,6 +4,7 @@
         "arrival_priority": 1,
         "departure_priority": 1,
         "simultaneous_taxi_and_take_off": true,
+        "flush_cache": true,        
         "num_initial_passengers": 0,
         "random_seed": 42,
         "logging": false,

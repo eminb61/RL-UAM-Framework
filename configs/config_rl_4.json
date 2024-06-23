@@ -4,6 +4,7 @@
         "arrival_priority": 1,
         "departure_priority": 1,
         "simultaneous_taxi_and_take_off": true,
+        "flush_cache": false,
         "num_initial_passengers": 0,
         "random_seed": 42,
         "logging": false,
@@ -285,7 +286,7 @@
         "aircraft_energy_consumption_data_folder_path": null,
         "min_init_soc": 20,
         "max_init_soc": 80,
-        "min_reserve_soc": 35
+        "min_reserve_soc": 20
     },
     "output_params": {
         "output_folder_path": "output/results",

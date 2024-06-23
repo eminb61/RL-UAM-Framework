@@ -21,3 +21,4 @@ PyYAML
 optuna
 optuna_distributed
 wandb
+diskcache
