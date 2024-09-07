@@ -52,10 +52,11 @@
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
         "optuna_db_url": "postgresql://emin:emin@localhost/rluam_4",        
-        "num_parallel_envs": 1,
+        "num_parallel_envs": 3,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 600,
         "periodic_time_step": null,
+        "periodic_and_event_driven": false,
         "stopping_events": [
             "passenger_arrival_event",
             "aircraft_parking_pad_arrival_event",

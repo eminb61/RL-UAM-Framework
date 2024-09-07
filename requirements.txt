@@ -11,6 +11,7 @@ uvicorn>=0.23.2
 gymnasium==0.29.1
 requests>=2.29.0
 torch
+torch-geometric
 pandas
 stable-baselines3
 tensorboard==2.10.0

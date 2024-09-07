@@ -1,4 +1,4 @@
-rl_model: "MaskablePPO"
+rl_model: "MaskableGATPPO"
 learning_scheduler: "constant"
 seed: 2
 hidden_layers: 64
@@ -12,4 +12,8 @@ gamma: 1
 total_steps: 500000
 clip_range: 0.11733
 clip_range_vf: 0.28446
-
+vertiport_out_channels: 16
+aircraft_out_channels: 16
+hidden_channels: 16
+num_gat_layers: 4
+heads: 6

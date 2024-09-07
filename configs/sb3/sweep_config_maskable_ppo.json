@@ -1,7 +1,7 @@
 {
     "rl_model": "MaskablePPO",
     "tuning_library": "Optuna",
-    "description": "FlatPPO",
+    "description": "FlatPPO_Spill",
     "parameters": {
         "learning_scheduler": {"values": ["constant"]},
         "learning_rate": {
@@ -26,7 +26,7 @@
             "min": 0.00001,
             "max": 0.01
         },
-        "total_steps": {"values": [500000]},
+        "total_steps": {"values": [1000000]},
         "seed": {"values": [0, 1, 2]}
     }
 

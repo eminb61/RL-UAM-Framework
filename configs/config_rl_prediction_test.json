@@ -7,16 +7,9 @@
         "flush_cache": false,
         "num_initial_passengers": 0,
         "random_seed": 42,
-        "logging": false,
-        "log_level": "warning",
+        "logging": true,
+        "log_level": "debug",
         "max_passenger_waiting_time": 600,
-        "per_destination_states": [
-            "num_waiting_passengers",
-            "num_spilled_passengers",                
-            "total_pax_waiting_time_per_od",
-            "avg_pax_waiting_time_per_od",
-            "std_pax_waiting_time_per_od"
-        ],
         "simulation_states": {
             "vertiport_states": [
                 "num_waiting_passengers",
@@ -42,7 +35,7 @@
         "only_aircraft_simulation": false,
         "network_simulation": true,
         "verbose": false,
-        "print_brief_metrics": false,        
+        "print_brief_metrics": true,        
         "training_data_collection": false
     },
     "sim_mode": {
@@ -79,7 +72,7 @@
         "reward_function_parameters": {
             "waiting_time_cost_type": "linear",
             "waiting_time_cost_unit": "minute",
-            "waiting_time_cost": -0.1,
+            "waiting_time_cost": -1,
             "holding_penalty": -1,    
             "spill_cost": -10,    
             "usd_energy_per_kwh": -0.25,                            
@@ -102,9 +95,9 @@
     "network_and_demand_params": {
         "vertiport_network_file_path": "vertisim/vertisim/input/network/network_LAX_DTLA.csv",
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
-        "passenger_schedule_file_path": null,
+        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand/5_23.csv",
         "passenger_arrival_rates_path": null,
-        "pick_demand_files_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand",
+        "pick_demand_files_path": null,
         "pick_rate_files_path": null,        
         "autoregressive_demand_files_path": null,
         "demand_probabilities": null,

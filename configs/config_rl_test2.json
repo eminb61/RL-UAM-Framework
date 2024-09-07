@@ -22,6 +22,7 @@
                 "num_waiting_passengers",
                 "num_spilled_passengers",                
                 "total_pax_waiting_time_per_od",
+                "std_pax_waiting_time_per_od",
                 "num_available_parking_pad",
                 "num_available_charger"
             ],
@@ -57,7 +58,7 @@
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "optuna_db_url": "postgresql://emin:emin@localhost/rluam_test",        
+        "optuna_db_url": "postgresql://emin:emin@localhost/rluam_test2",        
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 600,
