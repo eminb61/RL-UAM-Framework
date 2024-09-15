@@ -10,21 +10,27 @@
         "logging": false,
         "log_level": "error",
         "max_passenger_waiting_time": 600,
+        "per_destination_states": [
+            "num_waiting_passengers",
+            "num_spilled_passengers",                
+            "total_pax_waiting_time_per_od",
+            "avg_pax_waiting_time_per_od",
+            "std_pax_waiting_time_per_od"
+        ],
         "simulation_states": {
             "vertiport_states": [
                 "num_waiting_passengers",
-                "total_passenger_waiting_time",
-                "num_available_parking_pad"
+                "num_spilled_passengers",                
+                "total_pax_waiting_time_per_od",
+                "num_available_parking_pad",
+                "num_available_charger"
             ],
             "aircraft_states": [
-                "flight_direction",
-                "location",
+                "od_pair",
                 "time_to_arrival",
                 "soc",
                 "holding_time",
-                "num_passengers",
-                "status",
-                "is_first_time_charge"
+                "status"
             ],
             "environmental_states": [],
             "additional_states": [
@@ -51,11 +57,13 @@
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "optuna_db_url": "postgresql://emin:emin@localhost/rluam_4",        
-        "num_parallel_envs": 3,
+        "optuna_db_url": "postgresql://emin:emin@localhost/rluam_test",        
+        "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
-        "charge_time_per_charge_event": 600,
-        "periodic_time_step": null,
+        "charge_time_per_charge_event": 300,
+        "periodic_time_step": 60,
+        "periodic_and_event_driven": true,
+        "spill_optimization": true,
         "stopping_events": [
             "passenger_arrival_event",
             "aircraft_parking_pad_arrival_event",
@@ -257,7 +265,7 @@
         "time_post_landing_safety_checks": 0,
         "ground_taxi_speed": 3.67,
         "time_passenger_embark_disembark": 120,
-        "time_pre_charging_processes": 300,
+        "time_pre_charging_processes": 0,
         "time_charging_plug_disconnection": 0,
         "time_post_charging_processes": 180,
         "mtom": 2182,

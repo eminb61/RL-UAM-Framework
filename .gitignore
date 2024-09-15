@@ -136,3 +136,6 @@ events.out.tfevents*
 
 # Ignore zip files
 *.zip
+
+# Ignore pickle files
+*.pkl
