@@ -21,20 +21,12 @@
         "simulation_states": {
             "vertiport_states": [
                 "num_waiting_passengers",
-                "num_spilled_passengers",                
-                "total_pax_waiting_time_per_od",
-                "std_pax_waiting_time_per_od",
-                "num_available_parking_pad",
-                "num_available_charger",
-                "expected_pax_arr_per_od"
+                "num_spilled_passengers"
             ],
             "aircraft_states": [
                 "od_pair",
-                "time_to_arrival",
                 "soc",
-                "holding_time",
-                "status",
-                "num_passengers"                
+                "status"
             ],
             "environmental_states": [],
             "additional_states": [
@@ -61,7 +53,7 @@
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "optuna_db_url": "postgresql://emin:emin@localhost/rluam_test",        
+        "optuna_db_url": "postgresql://emin:emin@localhost/rluam_spill_minimal",        
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 300,
@@ -106,7 +98,7 @@
     "network_and_demand_params": {
         "vertiport_network_file_path": null,
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
-        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand/8_12.csv",
+        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand/4_2.csv",
         "passenger_arrival_rates_path": null,
         "pick_demand_files_path": null,
         "pick_rate_files_path": null,

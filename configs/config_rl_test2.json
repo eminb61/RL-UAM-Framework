@@ -21,20 +21,12 @@
         "simulation_states": {
             "vertiport_states": [
                 "num_waiting_passengers",
-                "num_spilled_passengers",                
-                "total_pax_waiting_time_per_od",
-                "std_pax_waiting_time_per_od",
-                "num_available_parking_pad",
-                "num_available_charger",
-                "expected_pax_arr_per_od"
+                "num_spilled_passengers"
             ],
             "aircraft_states": [
                 "od_pair",
-                "time_to_arrival",
                 "soc",
-                "holding_time",
-                "status",
-                "num_passengers"
+                "status"
             ],
             "environmental_states": [],
             "additional_states": [
@@ -53,7 +45,8 @@
         "ondemand": false,
         "offline_optimization": false,
         "rl": true,
-        "client_server": false
+        "client_server": false,
+        "optim_rl_comparison": true
     },
     "external_optimization_params": {
         "flight_duration_constant": null,
@@ -61,7 +54,7 @@
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "optuna_db_url": "postgresql://emin:emin@localhost/rluam_spill",        
+        "optuna_db_url": "postgresql://emin:emin@localhost/spill_npax_comp",        
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 300,
@@ -223,7 +216,7 @@
         "time_hover_descend": 15,
         "time_rotor_spin_down": 5,
         "time_post_landing_safety_checks": 0,
-        "ground_taxi_speed": 3.67,
+        "ground_taxi_speed": 1000000,
         "time_passenger_embark_disembark": 0,
         "time_pre_charging_processes": 0,
         "time_charging_plug_disconnection": 0,
@@ -254,7 +247,7 @@
         "aircraft_energy_consumption_data_folder_path": null,
         "min_init_soc": 20,
         "max_init_soc": 80,
-        "min_reserve_soc": 35
+        "min_reserve_soc": 20
     },
     "output_params": {
         "output_folder_path": "output/results",
