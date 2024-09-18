@@ -7,7 +7,7 @@
         "flush_cache": false,
         "num_initial_passengers": 0,
         "random_seed": 42,
-        "logging": true,
+        "logging": false,
         "log_level": "debug",
         "max_passenger_waiting_time": 600,
         "quadratic_states": {
@@ -24,12 +24,14 @@
         "simulation_states": {
             "vertiport_states": [
                 "waiting_time_bins",
-                "num_spilled_passengers"
+                "num_spilled_passengers",
+                "expected_pax_arr_per_od"
             ],
             "aircraft_states": [
                 "od_pair",
                 "soc",
-                "status"
+                "status",
+                "time_to_arrival"
             ],
             "environmental_states": [],
             "additional_states": [
@@ -41,7 +43,7 @@
         "only_aircraft_simulation": false,
         "network_simulation": true,
         "verbose": false,
-        "print_brief_metrics": true,        
+        "print_brief_metrics": false,        
         "training_data_collection": false
     },
     "sim_mode": {
@@ -254,7 +256,7 @@
         "min_reserve_soc": 20
     },
     "output_params": {
-        "save_output": true,        
+        "save_output": false,        
         "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",

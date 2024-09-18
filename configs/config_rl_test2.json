@@ -1,7 +1,7 @@
 {
     "sim_params": {
         "max_sim_time": 55296000,
-        "arrival_priority": 1,
+        "arrival_priority": 0,
         "departure_priority": 1,
         "simultaneous_taxi_and_take_off": true,
         "flush_cache": false,
@@ -10,6 +10,9 @@
         "logging": false,
         "log_level": "debug",
         "max_passenger_waiting_time": 600,
+        "quadratic_states": {
+            "waiting_time_bins": 10
+        },
         "per_destination_states": [
             "num_waiting_passengers",
             "num_spilled_passengers",                
@@ -20,13 +23,15 @@
         ],
         "simulation_states": {
             "vertiport_states": [
-                "num_waiting_passengers",
-                "num_spilled_passengers"
+                "waiting_time_bins",
+                "num_spilled_passengers",
+                "expected_pax_arr_per_od"
             ],
             "aircraft_states": [
                 "od_pair",
                 "soc",
-                "status"
+                "status",
+                "time_to_arrival"
             ],
             "environmental_states": [],
             "additional_states": [
@@ -38,7 +43,7 @@
         "only_aircraft_simulation": false,
         "network_simulation": true,
         "verbose": false,
-        "print_brief_metrics": true,        
+        "print_brief_metrics": false,        
         "training_data_collection": false
     },
     "sim_mode": {
@@ -54,11 +59,12 @@
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "optuna_db_url": "postgresql://emin:emin@localhost/spill_npax_comp",        
+        "optuna_db_url": "sqlite:///waiting_time_bins_tta_exp_pax.db",        
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 300,
         "periodic_time_step": 60,
+        "num_waiting_time_bins": 10,
         "periodic_and_event_driven": false,
         "spill_optimization": true,
         "stopping_events": [
@@ -89,10 +95,10 @@
             "no_pax_and_charge_reward": 2,
             "unnecessary_flight_penalty": -20,
             "repositioning_reward": 10,
-            "spill_cost": 120,    
-            "usd_energy_per_kwh": 0,                            
+            "spill_cost": 100,    
+            "usd_energy_per_kwh": 0.25,                            
             "usd_casm": 0.73,
-            "usd_base_fare": 5,
+            "usd_base_fare": 0,
             "usd_pax_mile": 3
         }
     },
@@ -250,15 +256,11 @@
         "min_reserve_soc": 20
     },
     "output_params": {
+        "save_output": false,        
         "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
         "state_trajectory_db_name": "state_trajectory_db",
-        "state_trajectory_db_tablename": "training_data_collection", 
-        "performance_metrics": [
-            "passenger_waiting_time",
-            "aircraft_holding_time",
-            "energy_consumption"
-        ]
+        "state_trajectory_db_tablename": "training_data_collection"
     }
 }
