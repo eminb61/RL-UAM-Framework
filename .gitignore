@@ -140,3 +140,6 @@ events.out.tfevents*
 
 # Ignore pickle files
 *.pkl
+
+# .run files
+*.run
