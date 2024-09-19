@@ -24,12 +24,14 @@
         "simulation_states": {
             "vertiport_states": [
                 "waiting_time_bins",
-                "num_spilled_passengers"
+                "num_spilled_passengers",
+                "expected_pax_arr_per_od"
             ],
             "aircraft_states": [
                 "od_pair",
                 "soc",
-                "status"
+                "status",
+                "time_to_arrival"
             ],
             "environmental_states": [],
             "additional_states": [
