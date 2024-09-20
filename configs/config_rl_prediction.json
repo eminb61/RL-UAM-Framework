@@ -80,7 +80,13 @@
         "reward_function_parameters": {
             "waiting_time_cost_type": "linear",
             "waiting_time_cost_unit": "minute",
-            "waiting_time_cost": 0,
+            "waiting_time_cost": 1,
+            "spill_cost": 300,    
+            "usd_energy_per_kwh": 0.25,                            
+            "usd_casm": 0.73,
+            "usd_base_fare": 0,
+            "usd_pax_mile": 3,  
+
             "holding_penalty": 0,    
             "trip_reward": 10,
             "flight_cost": -1,
@@ -92,12 +98,7 @@
             "no_pax_and_do_nothing_reward": 1,
             "no_pax_and_charge_reward": 2,
             "unnecessary_flight_penalty": -20,
-            "repositioning_reward": 10,
-            "spill_cost": 100,    
-            "usd_energy_per_kwh": 0.25,                            
-            "usd_casm": 0.73,
-            "usd_base_fare": 0,
-            "usd_pax_mile": 3
+            "repositioning_reward": 10
         }
     },
     "network_and_demand_params": {

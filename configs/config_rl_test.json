@@ -58,7 +58,7 @@
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
         "optuna_db_url": "sqlite:///waiting_time_bins.db",        
-        "num_parallel_envs": 1,
+        "num_parallel_envs": 2,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 300,
         "periodic_time_step": 60,
