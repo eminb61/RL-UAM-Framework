@@ -1,5 +1,5 @@
 {
-    "rl_model": "MaskablePPO",
+    "rl_model": "PPO",
     "tuning_library": "Optuna",
     "description": "FlatPPO_wtb10",
     "parameters": {
@@ -31,7 +31,7 @@
         },
         "total_steps": {"values": [5000000]},
         "seed": {"values": [0, 1, 2]},
-        "num_workers": {"values": [1]} 
+        "num_workers": {"values": [2]}
     }
 
 }

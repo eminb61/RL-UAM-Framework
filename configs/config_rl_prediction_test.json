@@ -30,8 +30,7 @@
             "aircraft_states": [
                 "od_pair",
                 "soc",
-                "status",
-                "time_to_arrival"
+                "status"
             ],
             "environmental_states": [],
             "additional_states": [
@@ -105,7 +104,7 @@
     "network_and_demand_params": {
         "vertiport_network_file_path": null,
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
-        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand/6_22.csv",
+        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand/5_23.csv",
         "passenger_arrival_rates_path": null,
         "pick_demand_files_path": null,
         "pick_rate_files_path": null,
