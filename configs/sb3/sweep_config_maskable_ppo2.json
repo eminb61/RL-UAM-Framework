@@ -1,7 +1,7 @@
 {
     "rl_model": "MaskablePPO",
     "tuning_library": "Optuna",
-    "description": "FlatPPO_wtb_10_tta_exp_pax_Sep18",
+    "description": "FlatPPO_num_pax",
     "parameters": {
         "learning_scheduler": {"values": ["constant", "linear"]},
         "learning_rate": {
@@ -12,7 +12,7 @@
             "min": 0.95,
             "max": 1
         },
-        "batch_size": {"values": [32, 64, 128, 256, 512, 1024]},
+        "batch_size": {"values": [16, 32, 64, 128, 256]},
         "clip_range": {
             "min": 0.1,
             "max": 0.5
@@ -22,15 +22,15 @@
             "max": 0.5
         },
         "activation_fn": {"values": ["ReLU"]},
-        "n_steps": {"values": [64, 128, 256, 512, 1024, 2048]},
-        "hidden_layers": {"values": [16, 32, 64, 128, 256]},
+        "n_steps": {"values": [16, 32, 64, 128, 256, 512, 1024, 1445]},
+        "hidden_layers": {"values": [8, 16, 32, 64, 128, 256]},
         "n_hidden_layers": {"values": [1, 2, 3, 4]},
         "ent_coef": {
             "min": 0.00001,
             "max": 0.01
         },
         "total_steps": {"values": [5000000]},
-        "seed": {"values": [0, 1, 2]}
+        "seed": {"values": [0, 1, 2]},
+        "num_workers": {"values": [1]} 
     }
-
 }

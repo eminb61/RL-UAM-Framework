@@ -23,15 +23,12 @@
         ],
         "simulation_states": {
             "vertiport_states": [
-                "waiting_time_bins",
-                "num_spilled_passengers",
-                "expected_pax_arr_per_od"
+                "num_waiting_passengers"
             ],
             "aircraft_states": [
                 "od_pair",
                 "soc",
-                "status",
-                "time_to_arrival"
+                "status"
             ],
             "environmental_states": [],
             "additional_states": [
@@ -59,8 +56,8 @@
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "optuna_db_url": "sqlite:///waiting_time_bins_tta_exp_pax.db",        
-        "num_parallel_envs": 2,
+        "optuna_db_url": "sqlite:///num_pax_only.db",        
+        "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 300,
         "periodic_time_step": 60,
@@ -94,7 +91,7 @@
             "no_pax_and_do_nothing_reward": 1,
             "no_pax_and_charge_reward": 2,
             "unnecessary_flight_penalty": -20,
-            "repositioning_reward": 10,
+            "repositioning_reward": 0,
             "spill_cost": 100,    
             "usd_energy_per_kwh": 0.25,                            
             "usd_casm": 0.73,
