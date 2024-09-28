@@ -94,7 +94,7 @@
             "no_pax_and_do_nothing_reward": 1,
             "no_pax_and_charge_reward": 2,
             "unnecessary_flight_penalty": -20,
-            "repositioning_reward": 10,
+            "repositioning_reward": 1,
             "spill_cost": 100,    
             "usd_energy_per_kwh": 0.25,                            
             "usd_casm": 0.73,
@@ -105,7 +105,7 @@
     "network_and_demand_params": {
         "vertiport_network_file_path": null,
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
-        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand/2_27.csv",
+        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand/1_1.csv",
         "passenger_arrival_rates_path": null,
         "pick_demand_files_path": null,
         "pick_rate_files_path": null,
@@ -133,7 +133,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 4,
+                    "num_initial_aircraft_at_vertiport": 2,
                     "initial_arrival_queue_state": 0
                 }
             },
@@ -157,7 +157,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 4,
+                    "num_initial_aircraft_at_vertiport": 3,
                     "initial_arrival_queue_state": 0
                 }
             }

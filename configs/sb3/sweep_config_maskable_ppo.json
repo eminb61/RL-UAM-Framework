@@ -1,7 +1,7 @@
 {
     "rl_model": "MaskablePPO",
     "tuning_library": "Optuna",
-    "description": "FlatPPO_num_pax_8_aircraft_5mins_dm",
+    "description": "FlatPPO_wtb_5_aircraft_5mins_dm",
     "parameters": {
         "learning_scheduler": {"values": ["constant", "linear"]},
         "learning_rate": {
