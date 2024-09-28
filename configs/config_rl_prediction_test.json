@@ -43,7 +43,8 @@
         "network_simulation": true,
         "verbose": false,
         "print_brief_metrics": true,        
-        "training_data_collection": false
+        "training_data_collection": false,
+        "algorithm": null
     },
     "sim_mode": {
         "ondemand": false,
@@ -104,7 +105,7 @@
     "network_and_demand_params": {
         "vertiport_network_file_path": null,
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
-        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand/5_23.csv",
+        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand/4_2.csv",
         "passenger_arrival_rates_path": null,
         "pick_demand_files_path": null,
         "pick_rate_files_path": null,
@@ -132,7 +133,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 4,
+                    "num_initial_aircraft_at_vertiport": 3,
                     "initial_arrival_queue_state": 0
                 }
             },
@@ -156,7 +157,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 4,
+                    "num_initial_aircraft_at_vertiport": 3,
                     "initial_arrival_queue_state": 0
                 }
             }

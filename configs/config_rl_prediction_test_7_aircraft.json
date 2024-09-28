@@ -23,7 +23,9 @@
         ],
         "simulation_states": {
             "vertiport_states": [
-                "num_waiting_passengers"
+                "waiting_time_bins",
+                "num_spilled_passengers",
+                "expected_pax_arr_per_od"
             ],
             "aircraft_states": [
                 "od_pair",
@@ -40,9 +42,9 @@
         "only_aircraft_simulation": false,
         "network_simulation": true,
         "verbose": false,
-        "print_brief_metrics": false,        
+        "print_brief_metrics": true,        
         "training_data_collection": false,
-        "algorithm": "MaskablePPO"
+        "algorithm": null
     },
     "sim_mode": {
         "ondemand": false,
@@ -57,11 +59,11 @@
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "optuna_db_url": "sqlite:///waiting_time_bins_flatppo_5mins_dm.db",        
+        "optuna_db_url": "sqlite:///waiting_time_bins_tta_exp_pax_overfit.db",        
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 300,
-        "periodic_time_step": 300,
+        "periodic_time_step": 60,
         "num_waiting_time_bins": 10,
         "periodic_and_event_driven": false,
         "spill_optimization": true,
@@ -84,7 +86,7 @@
             "holding_penalty": 0,    
             "trip_reward": 10,
             "flight_cost": -1,
-            "truncation_penalty": -10000,
+            "truncation_penalty": -100000,
             "charge_reward": 1,
             "soc_reward_threshold": 80,
             "waiting_full_pax_but_charge_penalty": -2,
@@ -101,12 +103,12 @@
         }
     },
     "network_and_demand_params": {
-        "vertiport_network_file_path": "vertisim/vertisim/input/network/network_LAX_DTLA.csv",
+        "vertiport_network_file_path": null,
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
-        "passenger_schedule_file_path": null,
+        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand/4_2.csv",
         "passenger_arrival_rates_path": null,
-        "pick_demand_files_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand",
-        "pick_rate_files_path": null,        
+        "pick_demand_files_path": null,
+        "pick_rate_files_path": null,
         "autoregressive_demand_files_path": null,
         "demand_probabilities": null,
         "demand_lookahead_time": 600,
@@ -131,7 +133,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 4,
+                    "num_initial_aircraft_at_vertiport": 3,
                     "initial_arrival_queue_state": 0
                 }
             },
@@ -254,7 +256,7 @@
         "min_reserve_soc": 20
     },
     "output_params": {
-        "save_output": false,        
+        "save_output": true,        
         "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
