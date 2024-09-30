@@ -7,7 +7,7 @@
         "flush_cache": false,
         "num_initial_passengers": 0,
         "random_seed": 42,
-        "logging": true,
+        "logging": false,
         "log_level": "debug",
         "max_passenger_waiting_time": 600,
         "quadratic_states": {
@@ -40,7 +40,7 @@
         "save_trajectories": false,
         "only_aircraft_simulation": false,
         "network_simulation": true,
-        "verbose": true,
+        "verbose": false,
         "print_brief_metrics": true,        
         "training_data_collection": false,
         "algorithm": "VertiSimHeuristics",
@@ -95,7 +95,7 @@
             "no_pax_and_do_nothing_reward": 1,
             "no_pax_and_charge_reward": 2,
             "unnecessary_flight_penalty": -20,
-            "repositioning_reward": 10,
+            "repositioning_reward": 1,
             "spill_cost": 100,    
             "usd_energy_per_kwh": 0.25,                            
             "usd_casm": 0.73,
@@ -135,7 +135,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 4,
+                    "num_initial_aircraft_at_vertiport": 2,
                     "initial_arrival_queue_state": 0
                 }
             },
@@ -159,7 +159,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 4,
+                    "num_initial_aircraft_at_vertiport": 3,
                     "initial_arrival_queue_state": 0
                 }
             }
@@ -174,7 +174,7 @@
         "static_wind": "relative_to_north", 
         "wind_magnitude_mph": 0,
         "wind_angle_degrees": 3.14159, 
-        "wind_data_file_path": "vertisim/vertisim/input/airspace/SFBayArea_wind_data.csv"
+        "wind_data_file_path": null
     },
     "passenger_params": {
         "randomize_constants": false,
@@ -258,7 +258,7 @@
         "min_reserve_soc": 20
     },
     "output_params": {
-        "save_output": false,        
+        "save_output": true,        
         "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",

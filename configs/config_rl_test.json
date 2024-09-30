@@ -30,7 +30,8 @@
             "aircraft_states": [
                 "od_pair",
                 "soc",
-                "status"
+                "status",
+                "time_to_arrival"
             ],
             "environmental_states": [],
             "additional_states": [
@@ -63,7 +64,7 @@
         "optuna_db_url": "sqlite:///waiting_time_bins_flatppo_5mins_dm.db",        
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
-        "charge_time_per_charge_event": 300,
+        "charge_time_per_charge_event": 299,
         "periodic_time_step": 300,
         "num_waiting_time_bins": 10,
         "periodic_and_event_driven": false,
@@ -88,14 +89,14 @@
             "trip_reward": 10,
             "flight_cost": -1,
             "truncation_penalty": -10000,
-            "charge_reward": 1,
             "soc_reward_threshold": 80,
             "waiting_full_pax_but_charge_penalty": -2,
             "waiting_full_pax_but_do_nothing_penalty": -4,
             "no_pax_and_do_nothing_reward": 1,
             "no_pax_and_charge_reward": 2,
             "unnecessary_flight_penalty": -20,
-            "repositioning_reward": 1,
+            "charge_reward": 1,
+            "repositioning_reward": 5,
             "spill_cost": 100,    
             "usd_energy_per_kwh": 0.25,                            
             "usd_casm": 0.73,
@@ -112,7 +113,7 @@
         "pick_rate_files_path": null,        
         "autoregressive_demand_files_path": null,
         "demand_probabilities": null,
-        "demand_lookahead_time": 600,
+        "demand_lookahead_time": 900,
         "vertiports": {
             "LAX": {
                 "layout": "clover_1_fato_8_park_lax",
@@ -173,7 +174,7 @@
         "static_wind": "relative_to_north", 
         "wind_magnitude_mph": 0,
         "wind_angle_degrees": 3.14159, 
-        "wind_data_file_path": "vertisim/vertisim/input/airspace/SFBayArea_wind_data.csv"
+        "wind_data_file_path": null
     },
     "passenger_params": {
         "randomize_constants": false,
