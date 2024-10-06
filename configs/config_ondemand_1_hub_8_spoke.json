@@ -45,7 +45,7 @@
         "verbose": false,
         "print_brief_metrics": true,        
         "training_data_collection": false,
-        "algorithm": "MaskablePPO"
+        "algorithm": "VertiSimHeuristics"
     },
     "sim_mode": {
         "ondemand": true,
