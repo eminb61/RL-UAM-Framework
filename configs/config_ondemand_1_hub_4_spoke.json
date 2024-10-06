@@ -106,7 +106,7 @@
     "network_and_demand_params": {
         "vertiport_network_file_path": null,
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout_rl.xls",
-        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/1_hub_8_spoke/passenger_arrival_1_1.csv",
+        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/1_hub_4_spoke_2000/passenger_arrival_1_1.csv",
         "passenger_arrival_rates_path": null,
         "pick_demand_files_path": null,
         "pick_rate_files_path": null,
@@ -134,7 +134,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 8,
+                    "num_initial_aircraft_at_vertiport": 6,
                     "initial_arrival_queue_state": 0
                 }
             },       
@@ -182,7 +182,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 3,
+                    "num_initial_aircraft_at_vertiport": 2,
                     "initial_arrival_queue_state": 0
                 }
             },              
@@ -206,7 +206,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 3,
+                    "num_initial_aircraft_at_vertiport": 2,
                     "initial_arrival_queue_state": 0
                 }
             },              
@@ -230,7 +230,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 3,
+                    "num_initial_aircraft_at_vertiport": 2,
                     "initial_arrival_queue_state": 0
                 }
             }         
