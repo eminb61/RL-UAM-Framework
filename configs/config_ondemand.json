@@ -4,7 +4,7 @@
         "arrival_priority": 0,
         "departure_priority": 1,
         "simultaneous_taxi_and_take_off": true,
-        "flush_cache": false,
+        "flush_cache": true,
         "num_initial_passengers": 0,
         "random_seed": 42,
         "logging": false,
@@ -55,7 +55,7 @@
     },
 
     "external_optimization_params": {
-        "flight_duration_constant": 600,
+        "flight_duration_constant": null,
         "soc_decrement_constant": null,
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
@@ -107,13 +107,13 @@
     "network_and_demand_params": {
         "vertiport_network_file_path": "vertisim/vertisim/input/network/network_LAX_DTLA.csv",
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
-        "passenger_schedule_file_path":  "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand/10_29.csv",
+        "passenger_schedule_file_path":  "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand/10_6.csv",
         "passenger_arrival_rates_path": null,
         "pick_demand_files_path": null,
         "pick_rate_files_path": null,        
         "autoregressive_demand_files_path": null,
         "demand_probabilities": null,
-        "demand_lookahead_time": 600,
+        "demand_lookahead_time": 900,
         "vertiports": {
             "LAX": {
                 "layout": "clover_1_fato_8_park_lax",
@@ -169,6 +169,7 @@
         "airspace_layout_file_path": null,
         "airlink_capacity": 1,
         "airlink_segment_length_mile": 1,
+        "fixed_num_airlinks": 0,
         "holding_unit_capacity": 20, 
         "cruise_altitude": 450,  
         "static_wind": "relative_to_north", 
@@ -259,10 +260,11 @@
     },
     "output_params": {
         "save_output": true,        
+        "brief_metrics": true,        
         "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
-        "performance_metrics_db_name": "vertisim_heuristics",
+        "performance_metrics_db_name": "vertisim_heuristics_trial5",
         "state_trajectory_db_name": "state_trajectory_db",
         "state_trajectory_db_tablename": "training_data_collection"
     }

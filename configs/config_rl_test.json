@@ -30,8 +30,7 @@
             "aircraft_states": [
                 "od_pair",
                 "soc",
-                "status",
-                "time_to_arrival"
+                "status"
             ],
             "environmental_states": [],
             "additional_states": [
@@ -65,7 +64,7 @@
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 299,
-        "periodic_time_step": 300,
+        "periodic_time_step": 60,
         "num_waiting_time_bins": 10,
         "periodic_and_event_driven": false,
         "spill_optimization": true,
@@ -96,7 +95,7 @@
             "no_pax_and_charge_reward": 2,
             "unnecessary_flight_penalty": -20,
             "charge_reward": 1,
-            "repositioning_reward": 5,
+            "repositioning_reward": 27,
             "spill_cost": 100,    
             "usd_energy_per_kwh": 0.25,                            
             "usd_casm": 0.73,
