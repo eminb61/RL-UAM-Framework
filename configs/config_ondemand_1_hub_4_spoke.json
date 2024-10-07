@@ -332,6 +332,7 @@
     "output_params": {
         "save_output": true,        
         "brief_metrics": true,
+        "only_return_brief_metrics": true,        
         "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
