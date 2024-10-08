@@ -9,6 +9,6 @@ n_steps: 512
 batch_size: 512
 ent_coef: 0.0050344
 gamma: 1
-total_steps: 500000
+total_steps: 600
 clip_range: 0.11733
 clip_range_vf: 0.28446

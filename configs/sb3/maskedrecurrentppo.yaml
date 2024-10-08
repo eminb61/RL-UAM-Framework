@@ -9,7 +9,7 @@ n_steps: 64
 batch_size: 512
 ent_coef: 0.0024367
 gamma: 0.95597
-total_steps: 5000000
+total_steps: 600
 clip_range: 0.35116
 clip_range_vf: 0.21794
 lstm_hidden_size: 64
