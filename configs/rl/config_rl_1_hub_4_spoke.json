@@ -30,8 +30,7 @@
             "aircraft_states": [
                 "od_pair",
                 "soc",
-                "status",
-                "time_to_arrival"
+                "status"
             ],
             "environmental_states": [],
             "additional_states": [
@@ -61,11 +60,11 @@
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "optuna_db_url": "sqlite:///waiting_time_bins_flatppo_5min_dm_1_hub_4_spoke.db",        
+        "optuna_db_url": "sqlite:///wtb_recurrent_5min_dm_1_hub_4_spoke_no_tta.db",        
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 299,
-        "periodic_time_step": 300,
+        "periodic_time_step": 60,
         "num_waiting_time_bins": 10,
         "periodic_and_event_driven": false,
         "spill_optimization": true,
