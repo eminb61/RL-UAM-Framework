@@ -45,7 +45,8 @@
         "verbose": false,
         "print_brief_metrics": true,        
         "training_data_collection": false,
-        "algorithm": "VertiSimHeuristics"
+        "algorithm": "VertiSimHeuristics",
+        "light_simulation": true
     },
     "sim_mode": {
         "ondemand": true,
@@ -113,6 +114,8 @@
         "autoregressive_demand_files_path": null,
         "demand_probabilities": null,
         "demand_lookahead_time": 1200,
+        "star_network": true,
+        "hub_vertiport_id": "LAX",
         "vertiports": {
             "LAX": {
                 "layout": "clover_3_fato_30_park_lax",
@@ -134,7 +137,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 13,
+                    "num_initial_aircraft_at_vertiport": 15,
                     "initial_arrival_queue_state": 0
                 }
             },       
@@ -158,7 +161,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 4,
+                    "num_initial_aircraft_at_vertiport": 7,
                     "initial_arrival_queue_state": 0
                 }
             },
@@ -182,7 +185,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 3,
+                    "num_initial_aircraft_at_vertiport": 4,
                     "initial_arrival_queue_state": 0
                 }
             },              
@@ -206,7 +209,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 3,
+                    "num_initial_aircraft_at_vertiport": 4,
                     "initial_arrival_queue_state": 0
                 }
             },              
@@ -230,7 +233,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 3,
+                    "num_initial_aircraft_at_vertiport": 4,
                     "initial_arrival_queue_state": 0
                 }
             },              
@@ -254,7 +257,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 3,
+                    "num_initial_aircraft_at_vertiport": 4,
                     "initial_arrival_queue_state": 0
                 }
             },               
@@ -278,7 +281,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 3,
+                    "num_initial_aircraft_at_vertiport": 4,
                     "initial_arrival_queue_state": 0
                 }
             },               
@@ -428,10 +431,11 @@
     "output_params": {
         "save_output": true,        
         "brief_metrics": true,
+        "only_return_brief_metrics": true,        
         "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
-        "performance_metrics_db_name": "vertisim_heuristics_1_hub_8_spoke",
+        "performance_metrics_db_name": "vertisim_heuristics_1_hub_8_spoke_2000",
         "state_trajectory_db_name": "state_trajectory_db",
         "state_trajectory_db_tablename": "training_data_collection"
     }

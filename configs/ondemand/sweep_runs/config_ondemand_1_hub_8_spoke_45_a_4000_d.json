@@ -107,7 +107,7 @@
     "network_and_demand_params": {
         "vertiport_network_file_path": null,
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout_rl.xls",
-        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/1_hub_4_spoke_2000/passenger_arrival_1_1.csv",
+        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/1_hub_8_spoke/passenger_arrival_1_1.csv",
         "passenger_arrival_rates_path": null,
         "pick_demand_files_path": null,
         "pick_rate_files_path": null,
@@ -137,7 +137,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 13,
+                    "num_initial_aircraft_at_vertiport": 15,
                     "initial_arrival_queue_state": 0
                 }
             },       
@@ -185,7 +185,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 6,
+                    "num_initial_aircraft_at_vertiport": 4,
                     "initial_arrival_queue_state": 0
                 }
             },              
@@ -209,7 +209,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 5,
+                    "num_initial_aircraft_at_vertiport": 4,
                     "initial_arrival_queue_state": 0
                 }
             },              
@@ -233,7 +233,103 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 4,
+                    "num_initial_aircraft_at_vertiport": 3,
+                    "initial_arrival_queue_state": 0
+                }
+            },              
+            "WDHL": {
+                "layout": "clover_2_fato_20_park_wdhl",
+                "holding_unit_capacity": 50,
+                "num_security_check_servers": 10,
+                "num_chargers": 20,
+                "charger_max_charge_rate": 350,
+                "charger_efficiency": 0.9,
+                "shared_charger_sets": null,
+                "passenger_arrival_process": {
+                    "passenger_interarrival_constant": null,
+                    "num_passengers": 50,
+                    "passenger_arrival_distribution": {
+                        "distribution_name": "expon",
+                        "parameters": {
+                            "scale": null
+                        },
+                        "max_val_in_dist": null
+                    }
+                },
+                "aircraft_arrival_process": {
+                    "num_initial_aircraft_at_vertiport": 3,
+                    "initial_arrival_queue_state": 0
+                }
+            },               
+            "UVS": {
+                "layout": "clover_2_fato_20_park_uvs",
+                "holding_unit_capacity": 50,
+                "num_security_check_servers": 10,
+                "num_chargers": 20,
+                "charger_max_charge_rate": 350,
+                "charger_efficiency": 0.9,
+                "shared_charger_sets": null,
+                "passenger_arrival_process": {
+                    "passenger_interarrival_constant": null,
+                    "num_passengers": 50,
+                    "passenger_arrival_distribution": {
+                        "distribution_name": "expon",
+                        "parameters": {
+                            "scale": null
+                        },
+                        "max_val_in_dist": null
+                    }
+                },
+                "aircraft_arrival_process": {
+                    "num_initial_aircraft_at_vertiport": 3,
+                    "initial_arrival_queue_state": 0
+                }
+            },               
+            "PSD": {
+                "layout": "clover_2_fato_20_park_psd",
+                "holding_unit_capacity": 50,
+                "num_security_check_servers": 10,
+                "num_chargers": 20,
+                "charger_max_charge_rate": 350,
+                "charger_efficiency": 0.9,
+                "shared_charger_sets": null,
+                "passenger_arrival_process": {
+                    "passenger_interarrival_constant": null,
+                    "num_passengers": 50,
+                    "passenger_arrival_distribution": {
+                        "distribution_name": "expon",
+                        "parameters": {
+                            "scale": null
+                        },
+                        "max_val_in_dist": null
+                    }
+                },
+                "aircraft_arrival_process": {
+                    "num_initial_aircraft_at_vertiport": 3,
+                    "initial_arrival_queue_state": 0
+                }
+            },              
+            "BVH": {
+                "layout": "clover_2_fato_20_park_bvh",
+                "holding_unit_capacity": 50,
+                "num_security_check_servers": 10,
+                "num_chargers": 20,
+                "charger_max_charge_rate": 350,
+                "charger_efficiency": 0.9,
+                "shared_charger_sets": null,
+                "passenger_arrival_process": {
+                    "passenger_interarrival_constant": null,
+                    "num_passengers": 50,
+                    "passenger_arrival_distribution": {
+                        "distribution_name": "expon",
+                        "parameters": {
+                            "scale": null
+                        },
+                        "max_val_in_dist": null
+                    }
+                },
+                "aircraft_arrival_process": {
+                    "num_initial_aircraft_at_vertiport": 3,
                     "initial_arrival_queue_state": 0
                 }
             }         
@@ -339,7 +435,7 @@
         "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
-        "performance_metrics_db_name": "vertisim_heuristics_1_hub_4_spoke_4000",
+        "performance_metrics_db_name": "vertisim_heuristics_1_hub_8_spoke_4000",
         "state_trajectory_db_name": "state_trajectory_db",
         "state_trajectory_db_tablename": "training_data_collection"
     }
