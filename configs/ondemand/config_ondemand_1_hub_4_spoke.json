@@ -4,14 +4,14 @@
         "arrival_priority": 0,
         "departure_priority": 1,
         "simultaneous_taxi_and_take_off": true,
-        "flush_cache": true,
+        "flush_cache": false,
         "num_initial_passengers": 0,
         "random_seed": 42,
         "logging": false,
         "log_level": "debug",
         "max_passenger_waiting_time": 600,
         "quadratic_states": {
-            "waiting_time_bins": 10
+            "waiting_time_bins": 2
         },
         "per_destination_states": [
             "num_waiting_passengers",
@@ -30,8 +30,7 @@
             "aircraft_states": [
                 "od_pair",
                 "soc",
-                "status",
-                "time_to_arrival"
+                "status"
             ],
             "environmental_states": [],
             "additional_states": [
@@ -66,7 +65,7 @@
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": null,
         "periodic_time_step": 300,
-        "num_waiting_time_bins": 10,
+        "num_waiting_time_bins": 2,
         "periodic_and_event_driven": false,
         "spill_optimization": true,
         "stopping_events": [
@@ -335,11 +334,12 @@
     "output_params": {
         "save_output": true,        
         "brief_metrics": true,
-        "only_return_brief_metrics": true,        
+        "only_return_brief_metrics": false,        
         "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
         "performance_metrics_db_name": "vertisim_heuristics_1_hub_4_spoke_4000",
+        "database_format": "postgres",
         "state_trajectory_db_name": "state_trajectory_db",
         "state_trajectory_db_tablename": "training_data_collection"
     }

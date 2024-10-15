@@ -1,7 +1,7 @@
 {
     "rl_model": "MaskableRecurrentPPO",
     "tuning_library": "Optuna",
-    "description": "MaskableRecurrentPPO_5_min_dm_4_spoke_2000",
+    "description": "MaskableRecurrentPPO_8_spoke_2000_30_a",
     "parameters": {
         "learning_scheduler": {"values": ["constant"]},
         "learning_rate": {
@@ -22,7 +22,7 @@
             "max": 0.5
         },
         "activation_fn": {"values": ["ReLU"]},
-        "n_steps": {"values": [16, 32, 64, 128, 256, 512, 1024, 1445]},
+        "n_steps": {"values": [32, 64, 128, 256, 512, 1024, 1445]},
         "hidden_layers": {"values": [64, 128, 256, 512, 1024]},
         "n_hidden_layers": {"values": [1, 2, 3, 4]},
         "lstm_hidden_size": {"values": [64, 128, 256, 512]},

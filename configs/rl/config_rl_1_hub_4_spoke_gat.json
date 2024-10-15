@@ -11,7 +11,7 @@
         "log_level": "debug",
         "max_passenger_waiting_time": 600,
         "quadratic_states": {
-            "waiting_time_bins": 10
+            "waiting_time_bins": 2
         },
         "per_destination_states": [
             "num_waiting_passengers",
@@ -64,8 +64,8 @@
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 299,
-        "periodic_time_step": 60,
-        "num_waiting_time_bins": 10,
+        "periodic_time_step": 300,
+        "num_waiting_time_bins": 2,
         "periodic_and_event_driven": false,
         "spill_optimization": true,
         "stopping_events": [

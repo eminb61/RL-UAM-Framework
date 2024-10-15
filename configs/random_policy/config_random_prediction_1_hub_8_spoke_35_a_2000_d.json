@@ -30,8 +30,7 @@
             "aircraft_states": [
                 "od_pair",
                 "soc",
-                "status",
-                "time_to_arrival"
+                "status"
             ],
             "environmental_states": [],
             "additional_states": [
@@ -45,7 +44,8 @@
         "verbose": false,
         "print_brief_metrics": true,        
         "training_data_collection": false,
-        "algorithm": "RandomPolicy"
+        "algorithm": "RandomPolicy",
+        "light_simulation": true        
     },
     "sim_mode": {
         "ondemand": false,
@@ -99,7 +99,7 @@
             "spill_cost": 100,    
             "usd_energy_per_kwh": 0.25,                            
             "usd_casm": 0.73,
-            "usd_base_fare": 0,
+            "usd_base_fare": 5,
             "usd_pax_mile": 3
         }
     },
@@ -112,7 +112,9 @@
         "pick_rate_files_path": null,
         "autoregressive_demand_files_path": null,
         "demand_probabilities": null,
-        "demand_lookahead_time": 900,
+        "demand_lookahead_time": 1200,
+        "star_network": true,
+        "hub_vertiport_id": "LAX",
         "vertiports": {
             "LAX": {
                 "layout": "clover_3_fato_30_park_lax",
@@ -134,7 +136,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 8,
+                    "num_initial_aircraft_at_vertiport": 13,
                     "initial_arrival_queue_state": 0
                 }
             },       
@@ -158,7 +160,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 3,
+                    "num_initial_aircraft_at_vertiport": 5,
                     "initial_arrival_queue_state": 0
                 }
             },
@@ -231,6 +233,102 @@
                 },
                 "aircraft_arrival_process": {
                     "num_initial_aircraft_at_vertiport": 3,
+                    "initial_arrival_queue_state": 0
+                }
+            },              
+            "WDHL": {
+                "layout": "clover_2_fato_20_park_wdhl",
+                "holding_unit_capacity": 50,
+                "num_security_check_servers": 10,
+                "num_chargers": 20,
+                "charger_max_charge_rate": 350,
+                "charger_efficiency": 0.9,
+                "shared_charger_sets": null,
+                "passenger_arrival_process": {
+                    "passenger_interarrival_constant": null,
+                    "num_passengers": 50,
+                    "passenger_arrival_distribution": {
+                        "distribution_name": "expon",
+                        "parameters": {
+                            "scale": null
+                        },
+                        "max_val_in_dist": null
+                    }
+                },
+                "aircraft_arrival_process": {
+                    "num_initial_aircraft_at_vertiport": 2,
+                    "initial_arrival_queue_state": 0
+                }
+            },               
+            "UVS": {
+                "layout": "clover_2_fato_20_park_uvs",
+                "holding_unit_capacity": 50,
+                "num_security_check_servers": 10,
+                "num_chargers": 20,
+                "charger_max_charge_rate": 350,
+                "charger_efficiency": 0.9,
+                "shared_charger_sets": null,
+                "passenger_arrival_process": {
+                    "passenger_interarrival_constant": null,
+                    "num_passengers": 50,
+                    "passenger_arrival_distribution": {
+                        "distribution_name": "expon",
+                        "parameters": {
+                            "scale": null
+                        },
+                        "max_val_in_dist": null
+                    }
+                },
+                "aircraft_arrival_process": {
+                    "num_initial_aircraft_at_vertiport": 2,
+                    "initial_arrival_queue_state": 0
+                }
+            },               
+            "PSD": {
+                "layout": "clover_2_fato_20_park_psd",
+                "holding_unit_capacity": 50,
+                "num_security_check_servers": 10,
+                "num_chargers": 20,
+                "charger_max_charge_rate": 350,
+                "charger_efficiency": 0.9,
+                "shared_charger_sets": null,
+                "passenger_arrival_process": {
+                    "passenger_interarrival_constant": null,
+                    "num_passengers": 50,
+                    "passenger_arrival_distribution": {
+                        "distribution_name": "expon",
+                        "parameters": {
+                            "scale": null
+                        },
+                        "max_val_in_dist": null
+                    }
+                },
+                "aircraft_arrival_process": {
+                    "num_initial_aircraft_at_vertiport": 2,
+                    "initial_arrival_queue_state": 0
+                }
+            },              
+            "BVH": {
+                "layout": "clover_2_fato_20_park_bvh",
+                "holding_unit_capacity": 50,
+                "num_security_check_servers": 10,
+                "num_chargers": 20,
+                "charger_max_charge_rate": 350,
+                "charger_efficiency": 0.9,
+                "shared_charger_sets": null,
+                "passenger_arrival_process": {
+                    "passenger_interarrival_constant": null,
+                    "num_passengers": 50,
+                    "passenger_arrival_distribution": {
+                        "distribution_name": "expon",
+                        "parameters": {
+                            "scale": null
+                        },
+                        "max_val_in_dist": null
+                    }
+                },
+                "aircraft_arrival_process": {
+                    "num_initial_aircraft_at_vertiport": 2,
                     "initial_arrival_queue_state": 0
                 }
             }         
@@ -332,11 +430,12 @@
     "output_params": {
         "save_output": true,        
         "brief_metrics": true,
-        "only_return_brief_metrics": false,
+        "only_return_brief_metrics": false,        
         "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
-        "performance_metrics_db_name": "random_policy_1_hub_4_spoke",
+        "performance_metrics_db_name": "random_1_hub_8_spoke_2000",
+        "database_format": "postgresql",        
         "state_trajectory_db_name": "state_trajectory_db",
         "state_trajectory_db_tablename": "training_data_collection"
     }

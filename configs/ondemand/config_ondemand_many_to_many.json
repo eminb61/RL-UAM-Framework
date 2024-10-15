@@ -4,7 +4,7 @@
         "arrival_priority": 1,
         "departure_priority": 1,
         "simultaneous_taxi_and_take_off": true,
-        "flush_cache": true,        
+        "flush_cache": false,        
         "num_initial_passengers": 0,
         "random_seed": 42,
         "logging": false,
@@ -54,7 +54,7 @@
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 600,
-        "periodic_time_step": 60,
+        "periodic_time_step": 300,
         "stopping_events": [
             "passenger_arrival_event",
             "aircraft_parking_pad_arrival_event",
