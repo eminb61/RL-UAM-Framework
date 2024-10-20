@@ -7,7 +7,7 @@
         "flush_cache": false,
         "num_initial_passengers": 0,
         "random_seed": 42,
-        "logging": true,
+        "logging": false,
         "log_level": "debug",
         "max_passenger_waiting_time": 600,
         "quadratic_states": {

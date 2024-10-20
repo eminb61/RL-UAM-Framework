@@ -1,29 +1,36 @@
 {
     "sim_params": {
-        "max_sim_time": 55296000,
-        "arrival_priority": 1,
+        "max_sim_time": 86700,
+        "arrival_priority": 0,
         "departure_priority": 1,
         "simultaneous_taxi_and_take_off": true,
+        "flush_cache": false,
         "num_initial_passengers": 0,
         "random_seed": 42,
-        "logging": true,
+        "logging": false,
         "log_level": "debug",
         "max_passenger_waiting_time": 600,
+        "quadratic_states": {
+            "waiting_time_bins": 2
+        },
+        "per_destination_states": [
+            "num_waiting_passengers",
+            "num_spilled_passengers",                
+            "total_pax_waiting_time_per_od",
+            "avg_pax_waiting_time_per_od",
+            "std_pax_waiting_time_per_od",
+            "expected_pax_arr_per_od"
+        ],
         "simulation_states": {
             "vertiport_states": [
-                "num_waiting_passengers",
-                "total_passenger_waiting_time",
-                "expected_pax",
-                "num_available_parking_pad"
+                "waiting_time_bins",
+                "num_spilled_passengers",
+                "expected_pax_arr_per_od"
             ],
             "aircraft_states": [
-                "flight_direction",
-                "location",
+                "od_pair",
                 "soc",
-                "holding_time",
-                "num_passengers",
-                "status",
-                "is_first_time_charge"
+                "status"
             ],
             "environmental_states": [],
             "additional_states": [
@@ -31,30 +38,37 @@
             ]
         },
         "fleet_rebalancing": true,
-        "save_trajectories": true,
+        "save_trajectories": false,
         "only_aircraft_simulation": false,
         "network_simulation": true,
-        "verbose": true,
-        "training_data_collection": false
+        "verbose": false,
+        "print_brief_metrics": true,        
+        "training_data_collection": false,
+        "algorithm": "VertiSimHeuristics",
+        "light_simulation": true        
     },
 
     "sim_mode": {
         "ondemand": true,
         "offline_optimization": false,
         "rl": false,
-        "client_server": false
+        "client_server": false,
+        "optim_rl_comparison": true        
     },
-
     "external_optimization_params": {
         "flight_duration_constant": null,
+        "soc_decrement_constant": null,
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "optuna_db_url": "postgresql://emin:emin@localhost/rluam",        
+        "optuna_db_url": "sqlite:///waiting_time_bins_flatppo_1min_dm_1_hub_8_spoke.db",        
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
-        "charge_time_per_charge_event": 600,
-        "periodic_time_step": null,
+        "charge_time_per_charge_event": null,
+        "periodic_time_step": 300,
+        "num_waiting_time_bins": 2,
+        "periodic_and_event_driven": false,
+        "spill_optimization": true,
         "stopping_events": [
             "passenger_arrival_event",
             "aircraft_parking_pad_arrival_event",
@@ -70,40 +84,44 @@
         "reward_function_parameters": {
             "waiting_time_cost_type": "linear",
             "waiting_time_cost_unit": "minute",
-            "waiting_time_cost": -1,
+            "waiting_time_cost": 0,
+            "holding_penalty": 0,    
             "trip_reward": 10,
             "flight_cost": -1,
-            "spill_cost": -1000,
             "truncation_penalty": -100000,
-            "charge_reward": 1,
             "soc_reward_threshold": 80,
             "waiting_full_pax_but_charge_penalty": -2,
             "waiting_full_pax_but_do_nothing_penalty": -4,
             "no_pax_and_do_nothing_reward": 1,
             "no_pax_and_charge_reward": 2,
-            "holding_penalty": -5,
             "unnecessary_flight_penalty": -20,
-            "repositioning_reward": 10
+            "charge_reward": 1,
+            "repositioning_reward": 27,
+            "spill_cost": 100,    
+            "usd_energy_per_kwh": 0.25,                            
+            "usd_casm": 0.73,
+            "usd_base_fare": 5,
+            "usd_pax_mile": 3
         }
     },
-
     "network_and_demand_params": {
-        "vertiport_network_file_path": "vertisim/vertisim/input/network/network_SFO_SJ.csv",
-        "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
-        "charge_schedule_file_path": null,
-        "flight_schedule_file_path": null,
-        "pick_rate_files_path": null,
-        "pick_demand_files_path": null,        
-        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/rl_paper_two_vertiport_demand_sfo_sj.csv",
+        "vertiport_network_file_path": null,
+        "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout_rl.xls",
+        "passenger_schedule_file_path": "vertisim/vertisim/input/passenger/spill_demand/1_hub_8_spoke/passenger_arrival_1_1.csv",
         "passenger_arrival_rates_path": null,
-        "autoregressive_demand_files_path": null,        
+        "pick_demand_files_path": null,
+        "pick_rate_files_path": null,
+        "autoregressive_demand_files_path": null,
         "demand_probabilities": null,
+        "demand_lookahead_time": 900,
+        "star_network": false,
+        "hub_vertiport_id": "LAX",
         "vertiports": {
-            "SFO": {
-                "layout": "clover_1_fato_7_park_sfo",
+            "LAX": {
+                "layout": "clover_3_fato_30_park_lax",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
-                "num_chargers": 10,
+                "num_chargers": 30,
                 "charger_max_charge_rate": 350,
                 "charger_efficiency": 0.9,
                 "shared_charger_sets": null,
@@ -119,12 +137,12 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 5,
+                    "num_initial_aircraft_at_vertiport": 2,
                     "initial_arrival_queue_state": 0
                 }
             },
-            "SJ": {
-                "layout": "clover_1_fato_11_park_sj",
+            "DTLA": {
+                "layout": "clover_2_fato_20_park_dtla",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 12,
@@ -143,7 +161,7 @@
                     }
                 },
                 "aircraft_arrival_process": {
-                    "num_initial_aircraft_at_vertiport": 8,
+                    "num_initial_aircraft_at_vertiport": 3,
                     "initial_arrival_queue_state": 0
                 }
             }
@@ -151,15 +169,15 @@
     },
     "airspace_params": {
         "airspace_layout_file_path": null,
-        "airspace_layout_sheet_name": null,
         "airlink_capacity": 1,
-        "airlink_segment_length_mile": 1,
+        "airlink_segment_length_mile": 0,
+        "fixed_num_airlinks": 5,
         "holding_unit_capacity": 20, 
         "cruise_altitude": 450,  
         "static_wind": "relative_to_north", 
         "wind_magnitude_mph": 0,
         "wind_angle_degrees": 3.14159, 
-        "wind_data_file_path": "vertisim/vertisim/input/airspace/SFBayArea_wind_data.csv"
+        "wind_data_file_path": null
     },
     "passenger_params": {
         "randomize_constants": false,
@@ -187,7 +205,7 @@
         "climb_transition_vertical_velocity": 1.5,
         "climb_phase_end_forward_velocity": 45,
         "climb_phase_vertical_velocity": 3.125,
-        "cruise_speed": 67,
+        "cruise_speed": 67, 
         "descend_phase_end_forward_velocity": 36,
         "descend_phase_vertical_velocity": 3.8,
         "descend_transition_end_forward_velocity": 0,
@@ -209,11 +227,11 @@
         "time_hover_descend": 15,
         "time_rotor_spin_down": 5,
         "time_post_landing_safety_checks": 0,
-        "ground_taxi_speed": 3.67,
-        "time_passenger_embark_disembark": 120,
-        "time_pre_charging_processes": 180,
+        "ground_taxi_speed": 1000000,
+        "time_passenger_embark_disembark": 0,
+        "time_pre_charging_processes": 0,
         "time_charging_plug_disconnection": 0,
-        "time_post_charging_processes": 180,
+        "time_post_charging_processes": 0,
         "mtom": 2182,
         "wing_area": 13,
         "disk_load": 45.9,
@@ -227,7 +245,7 @@
         "eta_descend": 0.85,
         "eta_cruise": 0.9,
         "atmosphere_condition": "good",
-        "soc_update_interval": 30,
+        "soc_update_interval": 30,        
         "time_charging": null,
         "target_soc_constant": 60,
         "charging_time_dist": {
@@ -237,21 +255,21 @@
             },
             "max_val_in_dist": null
         },
-        "aircraft_energy_consumption_data_folder_path": "vertisim/vertisim/input/aircraft/energy_consumption",
+        "aircraft_energy_consumption_data_folder_path": null,
         "min_init_soc": 20,
         "max_init_soc": 80,
-        "min_reserve_soc": 40
+        "min_reserve_soc": 20
     },
     "output_params": {
-        "output_folder_path": "../../output/results",
+        "save_output": true,        
+        "brief_metrics": true,
+        "only_return_brief_metrics": false,        
+        "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
+        "performance_metrics_db_name": "two_vertiport",
+        "database_format": "postgresql",
         "state_trajectory_db_name": "state_trajectory_db",
-        "state_trajectory_db_tablename": "training_data_collection", 
-        "performance_metrics": [
-            "passenger_waiting_time",
-            "aircraft_holding_time",
-            "energy_consumption"
-        ]
+        "state_trajectory_db_tablename": "training_data_collection"
     }
 }

@@ -1,6 +1,6 @@
 {
     "sim_params": {
-        "max_sim_time": 87000,
+        "max_sim_time": 86700,
         "arrival_priority": 0,
         "departure_priority": 1,
         "simultaneous_taxi_and_take_off": true,
@@ -45,7 +45,7 @@
         "print_brief_metrics": false,        
         "training_data_collection": false,
         "algorithm": "MaskablePPO",
-        "light_simulation": true
+        "light_simulation": true        
     },
     "sim_mode": {
         "ondemand": false,
@@ -61,7 +61,7 @@
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "optuna_db_url": "sqlite:///databases/gatppo_5mins_dm.db",        
+        "optuna_db_url": "sqlite:///databases/2_vert_5mins_dm_exp_pax.db",        
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 299,
@@ -106,7 +106,7 @@
     },
     "network_and_demand_params": {
         "vertiport_network_file_path": "vertisim/vertisim/input/network/network_LAX_DTLA.csv",
-        "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout.xls",
+        "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout_rl.xls",
         "passenger_schedule_file_path": null,
         "passenger_arrival_rates_path": null,
         "pick_demand_files_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand",
@@ -118,10 +118,10 @@
         "hub_vertiport_id": "LAX",
         "vertiports": {
             "LAX": {
-                "layout": "clover_1_fato_8_park_lax",
+                "layout": "clover_3_fato_30_park_lax",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
-                "num_chargers": 10,
+                "num_chargers": 30,
                 "charger_max_charge_rate": 350,
                 "charger_efficiency": 0.9,
                 "shared_charger_sets": null,
@@ -142,7 +142,7 @@
                 }
             },
             "DTLA": {
-                "layout": "clover_1_fato_10_park_dtla",
+                "layout": "clover_2_fato_20_park_dtla",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 12,
@@ -267,7 +267,8 @@
         "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
-        "performance_metrics_db_name": "rl_2_vertiport",
+        "performance_metrics_db_name": "two_vertiport",
+        "database_format": "postgresql",
         "state_trajectory_db_name": "state_trajectory_db",
         "state_trajectory_db_tablename": "training_data_collection"
     }
