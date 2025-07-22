@@ -1,5 +1,3 @@
-# RL-UAM-Framework
-
 # UAM Fleet Management with Deep Reinforcement Learning
 
 A reinforcement learning framework for optimizing Urban Air Mobility (UAM) fleet operations in multi-vertiport networks. This repository implements the methodology described in "Online Fleet Management Under Uncertainty: A Deep Reinforcement Learning Approach" using VertiSim simulation environment.
