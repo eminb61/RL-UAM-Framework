@@ -60,7 +60,7 @@
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "optuna_db_url": "sqlite:///1_hub_8_spoke_4000_35_a.db",        
+        "optuna_db_url": "sqlite:///1_hub_8_spoke_4000_35_a_2_seat.db",        
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 299,
@@ -361,7 +361,7 @@
     },
     "aircraft_params": {
         "aircraft_model": "jobyS4",
-        "pax": 4,
+        "pax": 2,
         "range": 150,
         "soc": 100,
         "battery_capacity": 160,
@@ -435,7 +435,7 @@
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
         "performance_metrics_db_name": "rl_1_hub_8_spoke",
-        "database_format": "postgres",
+        "database_format": "postgresql",
         "state_trajectory_db_name": "state_trajectory_db",
         "state_trajectory_db_tablename": "training_data_collection"
     }

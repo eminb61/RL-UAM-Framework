@@ -24,8 +24,7 @@
         "simulation_states": {
             "vertiport_states": [
                 "waiting_time_bins",
-                "num_spilled_passengers",
-                "expected_pax_arr_per_od"
+                "num_spilled_passengers"
             ],
             "aircraft_states": [
                 "od_pair",

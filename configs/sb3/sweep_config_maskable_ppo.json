@@ -1,7 +1,7 @@
 {
     "rl_model": "MaskablePPO",
     "tuning_library": "Optuna",
-    "description": "FlatPPO_5_min_dm_4_spoke_test",
+    "description": "supernal_visit_Nov29_6_Seat",
     "parameters": {
         "learning_scheduler": {"values": ["constant", "linear"]},
         "learning_rate": {
@@ -29,7 +29,7 @@
             "min": 0.00001,
             "max": 0.01
         },
-        "total_steps": {"values": [2000000]},
+        "total_steps": {"values": [1440000]},
         "seed": {"values": [0, 1, 2]},
         "num_workers": {"values": [1]} 
     }

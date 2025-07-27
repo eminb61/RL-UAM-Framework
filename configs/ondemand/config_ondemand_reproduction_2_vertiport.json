@@ -100,7 +100,7 @@
             "spill_cost": 100,    
             "usd_energy_per_kwh": 0.25,                            
             "usd_casm": 0.73,
-            "usd_base_fare": 5,
+            "usd_base_fare": 0,
             "usd_pax_mile": 3
         }
     },
@@ -267,7 +267,7 @@
         "output_folder_path": "output/results",
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
-        "performance_metrics_db_name": "two_vertiport",
+        "performance_metrics_db_name": "paper_greedy_two_vertiport",
         "database_format": "postgresql",
         "state_trajectory_db_name": "state_trajectory_db",
         "state_trajectory_db_tablename": "training_data_collection"

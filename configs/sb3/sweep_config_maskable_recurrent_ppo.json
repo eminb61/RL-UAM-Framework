@@ -1,7 +1,7 @@
 {
     "rl_model": "MaskableRecurrentPPO",
     "tuning_library": "Optuna",
-    "description": "MaskableRecurrentPPO_8_spoke_2000_30_a",
+    "description": "MaskableRecurrentPPO_8_spoke_40_a_4000_d",
     "parameters": {
         "learning_scheduler": {"values": ["constant"]},
         "learning_rate": {

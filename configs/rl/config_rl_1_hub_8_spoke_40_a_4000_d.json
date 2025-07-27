@@ -435,7 +435,7 @@
         "config_output_file_name": "config",
         "performance_metrics_output_file_name": "performance_metrics",
         "performance_metrics_db_name": "rl_1_hub_8_spoke",
-        "database_format": "postgres",
+        "database_format": "postgresql",
         "state_trajectory_db_name": "state_trajectory_db",
         "state_trajectory_db_tablename": "training_data_collection"
     }

@@ -52,8 +52,7 @@
         "offline_optimization": false,
         "rl": true,
         "client_server": false,
-        "optim_rl_comparison": true,
-        "light_sim": true
+        "optim_rl_comparison": true
     },
     "external_optimization_params": {
         "flight_duration_constant": null,
@@ -61,7 +60,7 @@
         "charge_assignment_sensitivity": null,
         "charge_schedule_file_path": null,
         "flight_schedule_file_path": null,
-        "optuna_db_url": "sqlite:///databases/2_vert_5mins_dm_exp_pax.db",        
+        "optuna_db_url": "sqlite:///databases/2_vert_paper_5_a_test.db",        
         "num_parallel_envs": 1,
         "soc_increment_per_charge_event": null,
         "charge_time_per_charge_event": 299,
@@ -97,19 +96,19 @@
             "unnecessary_flight_penalty": -20,
             "charge_reward": 1,
             "repositioning_reward": 27,
-            "spill_cost": 100,    
-            "usd_energy_per_kwh": 0.25,                            
-            "usd_casm": 0.73,
+            "spill_cost": 100,
+            "usd_energy_per_kwh": 0.28,                            
+            "usd_casm": 0.79,
             "usd_base_fare": 0,
             "usd_pax_mile": 3
         }
     },
     "network_and_demand_params": {
-        "vertiport_network_file_path": "vertisim/vertisim/input/network/network_LAX_DTLA.csv",
+        "vertiport_network_file_path": null,
         "vertiport_layout_file_path": "vertisim/vertisim/input/vertiport_layouts/vertiport_layout_rl.xls",
         "passenger_schedule_file_path": null,
         "passenger_arrival_rates_path": null,
-        "pick_demand_files_path": "vertisim/vertisim/input/passenger/spill_demand/alpha_7_demand_500_demand",
+        "pick_demand_files_path": "vertisim/vertisim/input/passenger/spill_demand/test3",
         "pick_rate_files_path": null,        
         "autoregressive_demand_files_path": null,
         "demand_probabilities": null,
@@ -118,7 +117,7 @@
         "hub_vertiport_id": "LAX",
         "vertiports": {
             "LAX": {
-                "layout": "clover_3_fato_30_park_lax",
+                "layout": "clover_1_fato_5_park_lax",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 30,
@@ -142,7 +141,7 @@
                 }
             },
             "DTLA": {
-                "layout": "clover_2_fato_20_park_dtla",
+                "layout": "clover_1_fato_5_park_dtla",
                 "holding_unit_capacity": 20,
                 "num_security_check_servers": 10,
                 "num_chargers": 12,

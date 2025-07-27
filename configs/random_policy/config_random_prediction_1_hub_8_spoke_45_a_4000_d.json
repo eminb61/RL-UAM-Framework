@@ -99,7 +99,7 @@
             "spill_cost": 100,    
             "usd_energy_per_kwh": 0.25,                            
             "usd_casm": 0.73,
-            "usd_base_fare": 5,
+            "usd_base_fare": 0,
             "usd_pax_mile": 3
         }
     },

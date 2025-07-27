@@ -49,8 +49,7 @@
         "offline_optimization": false,
         "rl": true,
         "client_server": false,
-        "optim_rl_comparison": true,
-        "light_sim": true
+        "optim_rl_comparison": true
     },
     "external_optimization_params": {
         "flight_duration_constant": null,
